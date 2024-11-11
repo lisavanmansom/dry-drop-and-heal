@@ -18,12 +18,12 @@ De component library (letterlijk: een bibliotheek met componenten) die je gaat m
 
 Door op deze manier te werken wordt de *developer experience* (hierna DX) beter omdat: 
 1. Uniformiteit wordt afgedwongen
-2. Atomic Design wordt omarmd
+2. Een design strategie wordt omarmd
 3. Herhaling niet meer hoeft (DRY!)
 4. Bugs oplossen eenvoudiger wordt
 5. Samenwerken makkelijker wordt
 
-Het omarmen van deze ontwikkelstrategie vereist wel enig schakelen in de manier waarop je over code denkt. Het wordt abstracter omdat er meer afhankelijkheden en abstracties in je code gaan plaatsvinden. Je gaat denken in termen van NPM packages in plaats van in componenten in één repository. Waarschijnlijk heb je vorige sprints de kracht van componenten in een lokaal project al ontdekt, nu is het tijd om externe componenten in te laden!
+Het omarmen van deze ontwikkelstrategie vereist wel enig schakelen in de manier waarop je over code denkt. Het wordt abstracter omdat er meer afhankelijkheden en abstracties in je code gaan plaatsvinden. Je gaat bijvoorbeeld denken in termen van NPM packages in plaats van in componenten in één repository. Waarschijnlijk heb je ergens tijdens de vorige sprints de kracht van componenten in een lokaal project al ontdekt, nu is het tijd om externe componenten in te laden!
 
 ### Aanpak
 
@@ -70,11 +70,9 @@ Als de structuur staat kan je verder gaan aan de ontwikkeling voor jouw opdracht
 
 ## Criteria
 
-
 Deze opdracht is done als:
 
 - [ ] je een component library hebt gemaakt.
 - [ ] je hebt gewerkt volgens de verschillende fases van de development-lifecycle
 - [ ] je hebt je werk gedocumenteerd in de Readme en Wiki (user story, ontwerpbeslissingen, schetsen en code voorbeelden)
 - [ ] de website op Github staat en een live url heeft
-
