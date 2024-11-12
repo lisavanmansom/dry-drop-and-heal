@@ -1,0 +1,58 @@
+:root {
+    --w: #FFFF;
+    --b: #111;
+    --g: #A6A6A6;
+    --rt-1: #64AAC7;
+    --rt-2: #984A4A;
+    --rt-3: #6E9158;
+    --rt-4: #7C6097;
+
+    --b-2: #B26161;
+    --b-4: #9279A9;
+    --progress-bg: #595959;
+  }
+
+  @font-face {
+    font-family: Calvino;
+    src: url(../font/calvino-trial/Calvino-Grande-Regular-trial.ttf);
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: Figtree;
+    src: url(../font/figtree/Figtree-Regular.ttf);
+    font-weight: 200;
+  }
+
+  @font-face {
+    font-family: dm-serif;
+    src: url(../font/dm-serif/DMSerifDisplay-Regular.ttf);
+    font-weight: 100;
+  }
+
+  @font-face {
+    font-family: Heroic;
+    src: url(../font/heroic/heroic-brutal.otf);
+    font-weight: 100;
+}
+@font-face {
+    font-family: Calvino-Grande;
+    src: url(../font/calvino-trial/Calvino-Grande-Bold-trial.ttf);
+    font-weight: 800;
+  }
+
+* {
+    font-family: Figtree;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: none;
+  }
+
+*::-webkit-scrollbar {display: none;}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 1s;
+}
