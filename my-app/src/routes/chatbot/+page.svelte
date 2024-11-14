@@ -12,24 +12,23 @@
 <section class="drops">
   <h2>Community drops</h2>
   <p>Deel wat je van de oefening vond, lees ervaringen van anderen en steun elkaar in de reis door rouw. <strong>Je bent niet alleen.</strong> </p>
+
+  <ul>
+    {#each messages as message}
+      <li>{message.text} ({new Date(message.timestamp).toLocaleTimeString()})</li>
+    {/each}
+  </ul>
+  
+<footer>
+  <form method="POST">
+      <input type="text" bind:value={newMessage} placeholder="Type je bericht"/>
+      <button on:click={sendMessage}>Verstuur</button>
+  </form>
+</footer>
+
+
 </section>
   
-  <section class="chatroom">
-    
-    <ul>
-      {#each messages as message}
-        <li>{message.text} ({new Date(message.timestamp).toLocaleTimeString()})</li>
-      {/each}
-    </ul>
-    
-  <footer>
-    <form method="POST">
-        <input type="text" bind:value={newMessage} placeholder="Type je bericht"/>
-        <button on:click={sendMessage}>Verstuur</button>
-    </form>
-  </footer>
-
-  </section>
 </main>
   
 <style>
@@ -53,7 +52,7 @@
 
 main {
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
   width: 100%;
   height: 100vh;
   margin: auto;
@@ -62,6 +61,8 @@ main {
     }
 
 section {
+  display: flex;
+  flex-direction: column;
   background-color: #111111;
   width: 100%;
   height: 100vh;
@@ -127,7 +128,7 @@ input[type=text]:focus-visible {
   border-radius: 3px;
 }
 
-.chatroom footer {
+.drops footer {
   margin-top: auto;
   padding: 10px;
   border-top: 1px solid #ccc;
