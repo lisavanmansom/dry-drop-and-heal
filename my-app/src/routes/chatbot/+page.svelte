@@ -14,7 +14,7 @@
   <p>Deel wat je van de oefening vond, lees ervaringen van anderen en steun elkaar in de reis door rouw. <strong>Je bent niet alleen.</strong> </p>
 </section>
   
-  <!-- <section class="chatroom">
+  <section class="chatroom">
     
     <ul>
       {#each messages as message}
@@ -29,7 +29,7 @@
     </form>
   </footer>
 
-  </section> -->
+  </section>
 </main>
   
 <style>
