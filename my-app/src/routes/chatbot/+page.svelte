@@ -9,10 +9,13 @@
   </script>
 
   <main>
-
+<section class="drops">
+  <h2>Community drops</h2>
+  <p>Deel wat je van de oefening vond, lees ervaringen van anderen en steun elkaar in de reis door rouw. <strong>Je bent niet alleen.</strong> </p>
+</section>
   
-  <section class="chatroom">
-    <h1>Jouw reis, jouw tempo</h1>
+  <!-- <section class="chatroom">
+    
     <ul>
       {#each messages as message}
         <li>{message.text} ({new Date(message.timestamp).toLocaleTimeString()})</li>
@@ -26,7 +29,7 @@
     </form>
   </footer>
 
-  </section>
+  </section> -->
 </main>
   
 <style>
@@ -42,14 +45,29 @@
     font-weight: 200;
   }
 
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
 main {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   width: 100%;
+  height: 100vh;
   margin: auto;
   letter-spacing: 0.5px;
   height: 100%;
     }
+
+section {
+  background-color: #111111;
+  width: 100%;
+  height: 100vh;
+  color: #A6A6A6;
+  
+}
 
 .chatroom {
   display: flex;
@@ -65,11 +83,11 @@ main {
   color: #d9d9d9;
     }
 
-h1 {
+h2 {
   color: #efefef;
   font-family: Calvino;
   font-weight: 800;
-  font-size: 4.5em;
+  font-size: 3.5em;
     }
 
 ul li {
