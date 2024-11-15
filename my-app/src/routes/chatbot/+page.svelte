@@ -57,7 +57,6 @@ main {
   height: 100vh;
   margin: auto;
   letter-spacing: 0.5px;
-  height: 100%;
     }
 
 section {
@@ -69,20 +68,6 @@ section {
   color: #A6A6A6;
   
 }
-
-.chatroom {
-  display: flex;
-  flex-direction: column;
-  max-width: 100%;
-  height: 100vh;
-  margin: 40px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #111111;
-  color: #d9d9d9;
-    }
 
 h2 {
   color: #efefef;
@@ -137,15 +122,15 @@ input[type=text]:focus-visible {
 
 
     /* Desktop styles */
-@media only screen and (min-width: 1025px) {
-.chatroom {
+@media only screen and (max-width: 1025px) {
+.drops {
   width: 100%;
   margin: 40px auto;
   }
 }
 
 @media only screen and (max-width: 768px) {
-.chatroom {
+.drops {
   width: 100%;
   margin: 0;
   padding: 10px;
@@ -170,7 +155,7 @@ input[type=text]:focus-visible {
 @media only screen and (max-width: 480px) {
 
 
-  .chatroom {
+  .drops {
   width: 100%;
   margin: 0;
   padding: 10px;
