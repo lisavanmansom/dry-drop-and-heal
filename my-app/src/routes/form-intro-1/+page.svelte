@@ -11,8 +11,9 @@
 
     <h1>Vragenlijst gepersonaliseerd programma</h1>
 
-    <div aria-busy="true" aria-describedby="progress-bar"></div>
-    <progress value="60" max="100"></progress>
+    <label>
+      <progress value="70" max="100">70 %</progress>
+    </label>
 
     <h2>We stellen 12 vragen om een programma op maat voor je samen te stellen.</h2>
 
