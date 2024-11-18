@@ -1,12 +1,23 @@
 <script>
+   import { messages } from '../messagesStore.js';
+   let inputMessage = '';
+
+   const handleSubmit = async () => {
+        // Call the action to add a message
+        await fetch('/path-to-your-action', {
+            method: 'POST',
+            body: new URLSearchParams({ message: inputMessage })
+        });
+        inputMessage = ''; // Clear input after submission
+    };
   
-    let messages = [];
-    let newMessage = '';
+    // let messages = [];
+    // let newMessage = '';
   
-    function sendMessage() {
-      messages = [...messages, { text: newMessage, timestamp: new Date().getTime() }];
-      newMessage = '';
-    }
+    // function sendMessage() {
+    //   messages = [...messages, { text: newMessage, timestamp: new Date().getTime() }];
+    //   newMessage = '';
+    // }
   </script>
 
   <main>
@@ -14,17 +25,19 @@
   <h2>Community drops</h2>
   <p>Deel wat je van de oefening vond, lees ervaringen van anderen en steun elkaar in de reis door rouw. <strong>Je bent niet alleen.</strong> </p>
 
-  <ul>
-    {#each messages as message}
-      <li>{message.text} ({new Date(message.timestamp).toLocaleTimeString()})</li>
-    {/each}
-  </ul>
+
   
 <footer>
-  <form method="POST">
-      <input type="text" bind:value={newMessage} placeholder="Type je bericht"/>
-      <button on:click={sendMessage}>Verstuur</button>
+  <form on:submit|preventDefault={handleSubmit} method="POST">
+      <input type="text" bind:value={inputMessage} placeholder="Type je bericht"/>
+      <button type="submit">Verstuur</button>
   </form>
+
+  <ul>
+    {#each messages as message}
+      <li>{message}</li>
+    {/each}
+  </ul>
 </footer>
 
 
