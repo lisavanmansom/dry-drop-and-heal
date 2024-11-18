@@ -3,12 +3,13 @@
   export let name;
   export let value;
   export let labelText;
+  export let bindGroup;
 </script>
 
-<!--vgm kan dit ook zonder div?, styling toevoegen zodat het overzichtelijk
-kan worden neergezet. Nu als je div weggehaald staat alle inputs op 1 regel-->
+<!--in question-form staat de content van id / name / value / labeltext-->
+<!-- input component-->
 
 <div>
-  <input type="radio" id={id} name={name} value={value} />
+  <input type="radio" id={id} name={name} value={value} bind:group={bindGroup} />
   <label for={id}>{labelText}</label>
 </div>

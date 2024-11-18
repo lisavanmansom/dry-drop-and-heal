@@ -1,16 +1,14 @@
 <script>
-    import ViewTransition from '../navigation.svelte'
+
     import {ArrowR, ArrowL, QuestionForm} from '$lib'
+    export let data;
+    console.log(data);
    </script>
 
-  <div class="app">
-    <ViewTransition />
-  </div>
   
   <main>
 
     <h1>Vragenlijst gepersonaliseerd programma</h1>
-
     <label>
       <progress value="70" max="100">70 %</progress>
     </label>
@@ -19,5 +17,8 @@
   </main>
   
   <style>
+    main {
+      color: black;
+    }
      
   </style>

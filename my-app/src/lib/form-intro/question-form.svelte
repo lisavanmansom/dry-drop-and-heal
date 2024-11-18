@@ -36,12 +36,15 @@
   ];
 </script>
 
-<form>
+<!-- form component-->
+<form method="POST" action="?/submit"> <!-- form submission / native-->
   {#each questions as question}
+    <!-- QuestionSet / fieldsets-->
     <QuestionSet
       legend={question.legend}
       name={question.name}
       options={question.options}
     />
   {/each}
+  <button type="submit">Submit</button>
 </form>
