@@ -1,8 +1,6 @@
 <script>
-
     import {ArrowR, ArrowL, QuestionForm} from '$lib'
-    export let data;
-    console.log(data);
+
    </script>
 
   
@@ -13,7 +11,9 @@
       <progress value="70" max="100">70 %</progress>
     </label>
 
+ 
     <QuestionForm />
+
   </main>
   
   <style>
