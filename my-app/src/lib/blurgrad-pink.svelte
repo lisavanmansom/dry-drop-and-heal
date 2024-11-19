@@ -1,4 +1,13 @@
-<img src="/gradients/Meshgrad-pink.png" alt="" width="100" height="100" class="blurred-image" />
+<script>
+import { page } from '$app/stores';
+export let pageStyle = 'default';
+</script>
+
+<img 
+src="/gradients/Meshgrad-pink.png" 
+alt="" 
+width="100" height="100" 
+class={`blurred-image ${pageStyle}`}/>
 
  
 <style>
@@ -22,5 +31,9 @@
         border-radius: 100%;
         filter: blur(200px);
         z-index: 0;
+    }
+
+    .blurred-image.form-page {
+        transform: scale(2);
     }
 </style>

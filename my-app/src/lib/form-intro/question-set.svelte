@@ -3,7 +3,6 @@
   let {name, value, labelText,selectedOption, options, legend, ...others} = $props();
 </script>
 
-<!--in question-form staat de content van id / name / value / labeltext-->
 <!-- fieldset component-->
 <fieldset>
   <legend>{legend}</legend>
@@ -17,3 +16,18 @@
     />
   {/each}
 </fieldset>
+
+<style>
+  fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1em;
+    width: 100%;
+  }
+
+  legend {
+    font-size: 1.75em;
+    margin: 0 0 1em 0;
+  }
+</style>

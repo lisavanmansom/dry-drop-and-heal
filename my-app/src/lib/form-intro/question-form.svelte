@@ -32,7 +32,6 @@
       { value: "f3-i-4", labelText: "Ik voel me overweldigd door het verdriet en kan niet aan de toekomst denken."}
     ]
   }]
-
 </script>
 
 <!-- form component-->
@@ -45,5 +44,43 @@
       options={question.options}
     />
   {/each}
-  <button type="submit">Submit</button>
+  <button type="submit">Ga verder</button>
 </form>
+
+<style>
+  form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 7.5em;
+    text-align: center;
+    z-index: 10;
+  }
+
+  button {
+    background-color: transparent;
+    border: .1em solid var(--b-z);
+    border-radius: 1em;
+    color: var(--w);
+    cursor: pointer;
+    font-size:clamp(1rem, 5vw, 1.2rem);
+    padding: 1em 5em;
+    transition: all 0.5s ease-in;
+  }
+
+  button:active {
+    background-color: var(--w);
+    border: .1em solid var(--w);
+    color: var(--b);
+  }
+
+  button:hover {
+    background-color: var(--b-h);
+    border: .1em solid var(--w);
+    color: var(--b);
+  }
+
+  button:focus-within {
+    outline: 3px solid var(--b-f);
+  }
+</style>
