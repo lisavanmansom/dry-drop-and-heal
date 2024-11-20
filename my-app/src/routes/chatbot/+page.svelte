@@ -1,10 +1,10 @@
 <script>
-   import { messages } from '../routes/messagesStore.js';
+   import { messages } from '$lib/messagesStore.js';
    let inputMessage = '';
 
    const handleSubmit = async () => {
         // Call the action to add a message
-        await fetch('/path-to-your-action', {
+        await fetch('/api/messages', {
             method: 'POST',
             body: new URLSearchParams({ message: inputMessage })
         });
@@ -28,7 +28,7 @@
 
   
 <footer>
-  <form  method="POST">
+  <form method="POST">
       <input type="text" bind:value={inputMessage} placeholder="Type je bericht"/>
       <button type="submit">Verstuur</button>
   </form>
