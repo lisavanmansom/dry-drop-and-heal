@@ -1,5 +1,5 @@
 <script>
-   import { messages } from '../messagesStore.js';
+   import { messages } from '../routes/messagesStore.js';
    let inputMessage = '';
 
    const handleSubmit = async () => {
@@ -28,7 +28,7 @@
 
   
 <footer>
-  <form on:submit|preventDefault={handleSubmit} method="POST">
+  <form  method="POST">
       <input type="text" bind:value={inputMessage} placeholder="Type je bericht"/>
       <button type="submit">Verstuur</button>
   </form>
