@@ -28,7 +28,7 @@
 
   
 <footer>
-  <form method="POST">
+  <form method="POST" action="?/create">
       <input type="text" bind:value={inputMessage} placeholder="Type je bericht"/>
       <button type="submit">Verstuur</button>
   </form>
