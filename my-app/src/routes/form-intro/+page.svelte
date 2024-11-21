@@ -22,7 +22,7 @@
   </div>
 
   <div aria-hidden="true">
-    <BlurgradPink />
+    <BlurgradPink pageStyle="form-page"/>
   </div>
 </main>
   
