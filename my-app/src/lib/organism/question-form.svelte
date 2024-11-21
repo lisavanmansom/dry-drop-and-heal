@@ -1,5 +1,5 @@
 <script>
-  import QuestionSet from './question-set.svelte';
+  import QuestionSet from '../molecules/question-set.svelte';
 
   // content form
   let questions = [{

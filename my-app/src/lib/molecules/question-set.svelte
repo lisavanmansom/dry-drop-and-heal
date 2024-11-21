@@ -1,5 +1,5 @@
 <script>
-  import QuestionOption from './question-option.svelte';
+  import QuestionOption from '../atoms/question-option.svelte';
   let {name, value, labelText,selectedOption, options, legend, ...others} = $props();
 </script>
 
