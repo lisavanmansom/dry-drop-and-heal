@@ -35,7 +35,7 @@ class={`blurred-image ${pageStyle}`}/>
 
     .blurred-image.form-page {
         transform: scale(2);
-        /* animation: bg-gradient 2s linear infinite; */
+        /* animation: bg-gradient 10s linear infinite; */
     }
 
     @keyframes bg-gradient {
