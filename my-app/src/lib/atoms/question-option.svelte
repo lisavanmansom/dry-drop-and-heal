@@ -3,7 +3,6 @@
 </script>
 
 <!-- input component-->
-
 <label>
   <input type="radio" name={name} value={value} bind:group={bindGroup} />
   {labelText}
