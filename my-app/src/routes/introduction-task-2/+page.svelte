@@ -9,6 +9,8 @@
 
   import {MeshgradRed, ArrowL, ArrowR} from '$lib'
   import ViewTransition from '../navigation.svelte'
+  import NavButtons from '$lib/NavButtons.svelte'
+  import HeaderIntro from '$lib/HeaderIntro.svelte'
 
   let rt = "Rouwtaak"
   let sub2 = "De pijn doorvoelen"
@@ -18,26 +20,19 @@
 
 <div class="app">
     <ViewTransition />
-  </div>
+    </div>
 
 <main>
-    <h1>Introductie rouwtaken</h1>
-
+    <HeaderIntro headerText="Introductie rouwtaken" progressValue={25} />
     <section id="rt-2">
+        <HeaderIntro headerText="Introductie rouwtaken" progressValue={25} />
         <article>
             <h2>{rt}<em>2</em></h2>
             <h3>{sub2}</h3>
             <p>{d2}</p>
-            <div class="d-a">
-                <a href="./introduction-task-1"><ArrowL /></a>
-                <a href="./introduction-task-3"><ArrowR /></a>
-            </div>
+            <NavButtons leftLink="./introduction-task-1" rightLink="./introduction-task-3" borderColor="#FF4D4D"/>
         </article>
-
         <MeshgradRed class="meshgrad" />
-
-        <div aria-busy="true" aria-describedby="progress-bar"></div>
-            <progress value="40" max="100"></progress>
     </section>
 </main>
 
@@ -105,24 +100,6 @@
         gap: 1.5em;
         justify-content: space-around;
     }
-
-    progress { order: -2; }
-
-    progress[value] {
-        appearance: none;
-        border: none;
-        height: .2em;
-        -moz-appearance: none;
-        -webkit-appearance: none;
-        min-width: 90%;
-    }
-
-    progress[value]::-webkit-progress-bar {
-        background-color: var(--progress-bg);
-        border-radius: 20px;
-    }
-
-    progress[value]::-webkit-progress-value { background-color: var(--w); }
 
     #rt-2 a { border: .2em solid var(--b-2); }
 
