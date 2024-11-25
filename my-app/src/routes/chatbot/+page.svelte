@@ -28,7 +28,7 @@
 
   
 <footer>
-  <form method="POST" action="?/create">
+  <form on:submit={handleSubmit} method="POST">
       <input type="text" bind:value={inputMessage} placeholder="Type je bericht"/>
       <button type="submit">Verstuur</button>
   </form>
@@ -80,7 +80,6 @@ section {
   width: 100%;
   height: 100vh;
   color: #A6A6A6;
-  
 }
 
 h2 {
@@ -133,66 +132,93 @@ input[type=text]:focus-visible {
   border-top: 1px solid #ccc;
 }
 
+/* styles here will apply to extra small mobile devices */
+@media only screen and (min-width: 450px) {
+
+.drops {
+width: 100%;
+height: 100vh;
+margin: 0;
+padding: 10px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  background-color: #111111;
+  width: 100%;
+  height: 100vh;
+  color: #A6A6A6;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: .8em;
+}
+
+button {
+  width: 100%;
+}
+
+button:focus-visible {
+  outline: 2px solid red;
+  border-radius: 3px;
+}
+
+}
+
+@media only screen and (min-width: 768px) {
+.drops {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 10px;
+  }
+
+  input[type=text] {
+    width: 100%;
+    margin-bottom: .8em;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  button:focus-visible {
+    outline: 2px solid red;
+    border-radius: 3px;
+  }
+}
+
+
 
 
     /* Desktop styles */
-@media only screen and (max-width: 1025px) {
+@media only screen and (min-width: 1025px) {
 .drops {
   width: 100%;
+  height: 100vh;
   margin: 40px auto;
   }
-}
 
-@media only screen and (max-width: 768px) {
-.drops {
-  width: 100%;
-  margin: 0;
-  padding: 10px;
-  }
-
-  input[type=text] {
+  main {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
     width: 100%;
-    margin-bottom: .8em;
+    height: 100vh;
   }
 
-  button {
-    width: 100%;
-  }
-
-  button:focus-visible {
-    outline: 2px solid red;
-    border-radius: 3px;
-  }
-}
-
-/* styles here will apply to extra small mobile devices */
-@media only screen and (max-width: 480px) {
-
-
-  .drops {
-  width: 100%;
-  margin: 0;
-  padding: 10px;
+  section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-
-  }
-
-  input[type=text] {
-    width: 100%;
-    margin-bottom: .8em;
-  }
-
-  button {
-    width: 100%;
-  }
-
-  button:focus-visible {
-    outline: 2px solid red;
-    border-radius: 3px;
-  }
-  
+  background-color: #111111;
+  width: 100%;
+  height: 100vh;
+  color: #A6A6A6;
 }
-
+}
   </style>
