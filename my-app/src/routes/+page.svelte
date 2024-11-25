@@ -1,6 +1,5 @@
 <script>
     import MeshBlue from '$lib/meshgrad-blue-static.svelte';
-    import { goto } from '$app/navigation';
 </script>
 
 
@@ -13,9 +12,8 @@
             Er volgt eerst een introductie en kennismaking, hierna kan je op eigen tempo aan de slag in de omgeving.
         </p>
     </article>
-    <button class="start-button" on:click={() => goto('/uitleg-metafoor')}>
-        Starten
-    </button>
+    <a href="./uitleg-metafoor" class="start-button">Starten</a>
+
 </main>
 
 <style>
@@ -71,9 +69,7 @@
         position: absolute;
         bottom: 35px;
         z-index: 2000;
-    }
-
-    .intro-main .start-button {
+        display: inline-block; 
         background: none;
         border: 1px solid #F5F5F5;
         color: white;
@@ -82,23 +78,17 @@
         cursor: pointer;
         border-radius: 25px;
         margin-top: 1rem;
+        text-align: center;
+        text-decoration: none; 
         transition: background-color 0.3s;
     }
 
-    .intro-main button:hover {
+    .start-button:hover {
         background-color: rgba(245, 245, 245, 0.1);
     }
 
-    .intro-main button {
-        background: none;
-        border: none;
-        cursor: pointer;
-        color: white;
-        font-size: 2em;
+    .start-button:active {
+        background-color: rgba(245, 245, 245, 0.2);
     }
 
-    .intro-main button:disabled {
-        opacity: 0.5;
-        cursor: not-allowed;
-    }
 </style>

@@ -1,15 +1,12 @@
 <script>
     import BlurgradGreen from '$lib/blurgrad-green.svelte';
-    import ArrowL from '$lib/arrow-l.svelte';
-    import ArrowR from '$lib/arrow-r.svelte';
-    import { goto } from '$app/navigation';
+    import NavButtons from '$lib/NavButtons.svelte';
+    import HeaderIntro from '$lib/HeaderIntro.svelte'
 </script>
 
 <main class="intro-main">
     <article class="intro-article">
-        <header>
-            <h3>Introductie <br> algemeen</h3>
-        </header>
+        <HeaderIntro headerText="Introductie algemeen" progressValue={15} />
         <section class="content">
             <h2>Tools</h2>
             <p>
@@ -22,14 +19,8 @@
 
     <BlurgradGreen />
 
-    <div class="nav-buttons">
-        <button on:click={() => goto('/privacy')}>
-            <ArrowL />
-        </button>
-        <button on:click={() => goto('/rouwtaken')}>
-            <ArrowR />
-        </button>
-    </div>
+    <NavButtons leftLink="./privacy" rightLink="./rouwtaken" borderColor="#DDEC22"/>
+
 </main>
 
 <style>
@@ -76,13 +67,6 @@
         width: 100%;
     }
 
-    header {
-        text-align: left;
-        align-self: flex-start;
-        width: 100%;
-        margin-top: 2rem;
-    }
-
     .content {
         flex: 1;
         display: flex;
@@ -96,37 +80,14 @@
         font-size: 2.5em;
     }
 
-    .intro-main .nav-buttons {
-        position: absolute;
-        bottom: 35px;
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        max-width: 7rem;
-    }
-    
-    .nav-buttons button {
-        background: none;
-        border: 2px solid rgba(255, 175, 122, 0.8);
-        border-radius: 50%;
-        width: 50px; 
-        height: 50px; 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-    }
-
-    .nav-buttons button:hover {
-        background-color: rgba(255, 255, 255, 0.1); 
-        border-color: rgba(255, 255, 255, 1); 
-        color: rgba(255, 255, 255, 1); 
-    }
-
-    .nav-buttons button:disabled {
-        opacity: 0.5;
-        cursor: not-allowed;
+    /* Container Queries */
+    @container (min-width: 600px) {
+        .content {
+        padding-top: 5rem;
+        }
+        .content h2 {
+        font-size: 3em;
+        }
     }
 
 </style>

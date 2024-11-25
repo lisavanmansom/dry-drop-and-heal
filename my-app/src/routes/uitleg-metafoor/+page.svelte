@@ -1,9 +1,7 @@
 <script>
     import MeshBlue from '$lib/meshgrad-blue-static.svelte';
     import BlurgradBlue from '$lib/blurgrad-blue.svelte';
-    import ArrowL from '$lib/arrow-l.svelte';
-    import ArrowR from '$lib/arrow-r.svelte';
-    import { goto } from '$app/navigation';
+    import NavButtons from '$lib/NavButtons.svelte';
 </script>
 
 <main class="intro-main">
@@ -19,16 +17,11 @@
             Het is een uitnodiging om je verdriet te erkennen, het los te laten en jezelf toe te staan te helen, stap voor stap, druppel voor druppel.
         </p>
     </article>
+
     <BlurgradBlue />
 
-    <div class="nav-buttons">
-        <button on:click={() => goto('/')}>
-            <ArrowL />
-        </button>
-        <button on:click={() => goto('/privacy')}>
-            <ArrowR />
-        </button>
-    </div>
+    <NavButtons leftLink="./" rightLink="./privacy" borderColor="#4DB3FF"/>
+
 </main>
 
 <style>
@@ -40,17 +33,6 @@
     em      { font-family: Figtree; font-weight: 100; font-size: 16px; font-style: normal; margin: 0 .25em;}
     p       { color: var(--w); font-weight: 100; font-size: 16px; line-height: 1.5rem;}
 
-    .show {
-        opacity: 1;
-        visibility: visible;
-        transition: opacity 0.5s ease-in-out;
-    }
-
-    .hide {
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.5s ease-in-out;
-    }
 
     .intro-main {
         overflow: hidden;
@@ -74,38 +56,6 @@
         opacity: 40%;
     }
     
-    .intro-main .nav-buttons {
-        position: absolute;
-        bottom: 35px;
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        max-width: 7rem;
-    }
-
-    .nav-buttons button {
-        background: none;
-        border: 2px solid rgba(122, 206, 255, 0.8);
-        border-radius: 50%;
-        width: 50px; 
-        height: 50px; 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-    }
-
-    .nav-buttons button:hover {
-        background-color: rgba(255, 255, 255, 0.1); 
-        border-color: rgba(255, 255, 255, 1); 
-        color: rgba(255, 255, 255, 1); 
-    }
-
-    .nav-buttons button:disabled {
-        opacity: 0.5;
-        cursor: not-allowed;
-    }
 </style>
 
 

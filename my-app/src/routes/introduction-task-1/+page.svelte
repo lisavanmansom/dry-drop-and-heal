@@ -9,6 +9,8 @@
 
   import {MeshgradBlue, ArrowR} from '$lib'
   import ViewTransition from '../navigation.svelte'
+  import NavButtons from '$lib/NavButtons.svelte'
+  import HeaderIntro from '$lib/HeaderIntro.svelte'
 
   let rt = "Rouwtaak"
   let sub1 = "Het verlies aanvaarden"
@@ -21,11 +23,8 @@
   </div>
 
 <main>
-    <header>
-        <h1>Introductie rouwtaken</h1>
-        <a href="./introduction-h-1">skip</a>
-    </header>
-    
+    <HeaderIntro headerText="Introductie rouwtaken" progressValue={25} />
+    <a href="./introduction-h-1">skip</a>
 
       <section id="rt-1">
             <article>
@@ -33,15 +32,12 @@
                 <h3>{sub1}</h3>
                 <p>{d1}</p> 
 
-                <div class="d-a">
-                    <a href="./introduction-task-2"><ArrowR /></a>
-                </div>
+                <NavButtons leftLink="./rouwtaken" rightLink="./introduction-task-2" borderColor="#4DB3FF"/>
+
             </article>
 
             <MeshgradBlue class="meshgrad" />
         
-            <div aria-busy="true" aria-describedby="progress-bar"></div>
-            <progress value="20" max="100"></progress>
       </section>
 </main>
 
@@ -54,6 +50,7 @@
     p       { color: var(--g); font-weight: 100; font-size: 1.2em;}
 
     main {
+        padding: 2rem 2rem;
         background-color: var(--b);
         background-image: url("/gradients/Gr-blue.png");
         background-size: cover;
@@ -63,7 +60,6 @@
         display: flex;
         flex-direction: column;
         overflow-x: hidden;
-        padding: 2em 0;
         position: relative;
         min-height: 100dvh;
         width: 100%;
@@ -127,24 +123,6 @@
         gap: 1.5em;
         justify-content: space-around;
     }
-
-    progress { order: -2; }
-
-    progress[value] {
-        appearance: none;
-        border: none;
-        height: .2em;
-        -moz-appearance: none;
-        -webkit-appearance: none;
-        min-width: 90%;
-    }
-
-    progress[value]::-webkit-progress-bar {
-        background-color: var(--progress-bg);
-        border-radius: 20px;
-    }
-
-    progress[value]::-webkit-progress-value { background-color: var(--w); }
 
     #rt-1 a { border: .2em solid var(--rt-1); }
 
