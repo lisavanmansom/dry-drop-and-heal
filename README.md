@@ -1,9 +1,7 @@
-> _Fork_ deze leertaak en ga aan de slag. 
-Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. 
-De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
+> [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
-# Titel
-<!-- Geef je project een titel en schrijf in één zin wat het is -->
+# Drop and Heal / 2
+Rouw is een diep persoonlijke en vaak complexe ervaring die varieert van persoon tot persoon. Drop & Heal streeft ernaar om die leemte te vullen met een innovatieve benadering die technologie gebruikt om een gepersonaliseerd ondersteuningsprogramma te bieden dat zich aanpast aan de unieke behoeften van elke gebruiker. 
 
 ## Inhoudsopgave
 
@@ -15,14 +13,22 @@ De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
   * [Licentie](#licentie)
 
 ## Beschrijving
-<!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
+
+Bij de webapplicatie van Drop and Heal staat gebruiksvriendelijke, responsieve en empathisch vormgegeven front-end centraal. De interface sluit naadloos aan bij de emotionele behoefte van de gebruiker door de verschillende fase die Drop and Heal aanbied.
 
 ## Kenmerken
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
+
+Voor deze page is er gebruik gemaakt van het framework Sveltekit en wordt de data opgehaald uit Directus. De code strategie die er is gebruikt is PE, met CSS keyframes zijn er een aantal kleine animaties toegevoegd. Verder is mobile first gecodeerd, het kleinste scherm is 300px. In Google Chrome zijn er view-transitions zichtbaar wat zorgt voor een vloeiende overloop tussen de pagina's.
 
 ## Installatie
+
+* Installeer NodeJs;
+* Fork/clone deze repository;
+* Open het in een code editor;
+* Ga naar de directory 'my-app' door in de terminal cd my-app te typen;
+* Run de command npm install;
+* Run de command npm run dev;
+* Klik op de localhost link en begin met coden.
 
 ## Gebruik
 
