@@ -3,9 +3,9 @@
 </script>
 
 
-<main class="intro-main">
+<main>
     <MeshBlue />
-    <article class="intro-article">
+    <article class="content">
         <h1>Drop <br> & Heal</h1>
         <p>
             Welkom bij Drop & Heal. Een veilige plek voor jouw reis door rouwverwerking.<br><br>
@@ -18,26 +18,7 @@
 
 <style>
 
-    h1, h2, h3  { font-family: Calvino-Grande;}
-    h1      { font-size: 3em; font-weight: 600; z-index:2; max-width: 8em;}
-    h2      { font-weight: 100; font-size: 48px;}
-    h3      { font-weight: 100; text-wrap: nowrap; font-size: 32px;}
-    em      { font-family: Figtree; font-weight: 100; font-size: 16px; font-style: normal; margin: 0 .25em;}
-    p       { color: var(--w); font-weight: 100; font-size: 16px; line-height: 1.5rem;}
-
-    .show {
-        opacity: 1;
-        visibility: visible;
-        transition: opacity 0.5s ease-in-out;
-    }
-
-    .hide {
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.5s ease-in-out;
-    }
-
-    .intro-main {
+    main {
         overflow: hidden;
         display: flex;
         flex-direction: column;
@@ -49,19 +30,20 @@
         height: 100vh;
     }
 
-    .intro-main h1 {
+    main h1 {
         font-family: Calvino-Grande;
         font-size: 75px;
         line-height: 4.5rem;
         margin-bottom: 2rem;
     }
 
-    .intro-article {
+    .content {
         padding: 11rem 2rem 3rem 2rem;
         z-index: 100;
+        justify-content: center;
     }
     
-    .intro-article p {
+    .content p {
         padding-right: 3rem;
     }
 
