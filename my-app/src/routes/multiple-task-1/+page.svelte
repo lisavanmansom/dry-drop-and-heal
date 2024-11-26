@@ -1,8 +1,8 @@
 <script>
-  import Header from '../../lib/components/Header.svelte';
-  import Card from '../../lib/components/Card.svelte';
-  import { MeshgradBlue } from '$lib';
-  import Nav from '../../lib/components/Nav.svelte';
+  import Header from "../../lib/components/Header.svelte";
+  import Card from "../../lib/components/Card.svelte";
+  import { MeshgradBlue } from "$lib";
+  import Nav from "../../lib/components/Nav.svelte";
 </script>
 
 <html lang="nl">
@@ -32,22 +32,7 @@
       communityImages={[
         "/icon/community1.png",
         "/icon/community2.png",
-        "/icon/community3.png"
-      ]
-      }
-    />
-    <Card
-      imageSrc="/icon/rouwtaak-1-foto.png"
-      imageAlt="Rouwtaak Foto"
-      actionText="Start oefening"
-      description="Lezen"
-      title="Rouwen, hoe doe je dat?"
-      buttonColor="#64aac7"
-      communityDrops="47"
-      communityImages={[
-        "/icon/community1.png",
-        "/icon/community2.png",
-        "/icon/community3.png"
+        "/icon/community3.png",
       ]}
     />
     <Card
@@ -61,7 +46,7 @@
       communityImages={[
         "/icon/community1.png",
         "/icon/community2.png",
-        "/icon/community3.png"
+        "/icon/community3.png",
       ]}
     />
     <Card
@@ -75,7 +60,21 @@
       communityImages={[
         "/icon/community1.png",
         "/icon/community2.png",
-        "/icon/community3.png"
+        "/icon/community3.png",
+      ]}
+    />
+    <Card
+      imageSrc="/icon/rouwtaak-1-foto.png"
+      imageAlt="Rouwtaak Foto"
+      actionText="Start oefening"
+      description="Lezen"
+      title="Rouwen, hoe doe je dat?"
+      buttonColor="#64aac7"
+      communityDrops="47"
+      communityImages={[
+        "/icon/community1.png",
+        "/icon/community2.png",
+        "/icon/community3.png",
       ]}
     />
   </section>

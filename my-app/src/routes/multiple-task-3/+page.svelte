@@ -79,7 +79,7 @@
     />
   </section>
 
-<Nav/>
+  <Nav />
 </html>
 
 <style>
