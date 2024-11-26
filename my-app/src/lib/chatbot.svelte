@@ -1,18 +1,26 @@
 <script>
-   import { messages } from '$lib/messagesStore.js';
+  
+import { messages } from '$lib/messagesStore.js';
    let inputMessage = '';
 
-   const handleSubmit = async () => {
-    // Verstuur het bericht als JSON
-    await fetch('/api/messages', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ message: inputMessage })
-    });
-    inputMessage = ''; // Reset het invoerveld na verzending
-};
+   // Handelt de submitactie af
+   const handleSubmit = async (event) => {
+       event.preventDefault(); // Voorkom dat het formulier de pagina opnieuw laadt
+
+       // Voeg het nieuwe bericht toe aan de store
+       messages.update(currentMessages => [...currentMessages, inputMessage]);
+
+       // Verstuur het bericht naar de server
+       await fetch('/api/messages', {
+           method: 'POST',
+           headers: {
+               'Content-Type': 'application/json',
+           },
+           body: JSON.stringify({ message: inputMessage })
+       });
+
+       inputMessage = ''; // Reset het invoerveld na verzending
+   };
   </script>
 
   <main>
@@ -24,7 +32,7 @@
   
 <footer>
   <form on:submit={handleSubmit} method="POST">
-      <input type="text" bind:value={inputMessage} placeholder="Type je bericht"/>
+      <input type="text" placeholder="Type je bericht"/>
       <button type="submit">Verstuur</button>
   </form>
 

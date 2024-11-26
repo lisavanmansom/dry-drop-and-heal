@@ -8,9 +8,7 @@ export async function post(request) {
         };
     }
 
-    // Voeg het bericht toe aan een databron of een tijdelijke opslag zoals een bestand
-    // Hier kun je bijvoorbeeld een eenvoudige mock-opslag gebruiken
-    // Voor een echte applicatie zou dit een databaseaanroep zijn
+
 
     // Simuleer opslaan van het bericht (in een database of lokaal bestand)
     console.log('Nieuw bericht ontvangen:', message);
