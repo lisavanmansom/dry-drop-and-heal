@@ -2,16 +2,16 @@
 
 <style>
     img {
-        animation: aBlue 10s linear infinite;
-        height: 15em;
-        margin: 3em 0 1em 0;
+        animation: aPink 35s linear infinite;
+        height: 16em;
         order: -1;
         object-fit: contain;
         width: 100%;
         z-index: 5;
+        padding-bottom: 3rem;
     }
 
-    @keyframes aBlue {
+    @keyframes aPink {
     0% { transform: rotate(0); }
     100% { transform: rotate(360deg); }
     }

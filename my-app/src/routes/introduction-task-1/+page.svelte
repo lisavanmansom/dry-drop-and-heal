@@ -1,138 +1,98 @@
 <script>
-  export let task;
-  console.log('Task:', task);
+    import MeshgradBlue from '$lib/meshgrad-blue.svelte'
+    import NavButtons from '$lib/NavButtons.svelte'
+    import HeaderIntro from '$lib/HeaderIntro.svelte'
+    import BlurgradBlue from '../../lib/blurgrad-blue.svelte';
 
-  function stripHtml(html) {
+    // export let task;
+    // console.log('Task:', task);
+
+    function stripHtml(html) {
     return html.replace(/<\/?[^>]+(>|$)/g, "");
     // Verwijderd HTML tags die meegegeven zijn vanuit directus
-  }
-
-  import {MeshgradBlue, ArrowR} from '$lib'
-  import ViewTransition from '../navigation.svelte'
-  import NavButtons from '$lib/NavButtons.svelte'
-  import HeaderIntro from '$lib/HeaderIntro.svelte'
-
-  let rt = "Rouwtaak"
-  let sub1 = "Het verlies aanvaarden"
-  let d1 = "Ontdek hoe je de realiteit van het verlies kunt omarmen."
-  
+    }
+    let rt = "Rouwtaak"
+    let sub1 = "Het verlies aanvaarden"
+    let d1 = "Ontdek hoe je de realiteit van het verlies kunt omarmen."
 </script>
 
-<div class="app">
-    <ViewTransition />
-  </div>
-
-<main>
-    <HeaderIntro headerText="Introductie rouwtaken" progressValue={25} />
+<main class="intro-main">
     <a href="./introduction-h-1">skip</a>
+    <HeaderIntro headerText_l1="Introductie" headerText_l2="rouwtaken" progressValue={40} />
 
-      <section id="rt-1">
-            <article>
-                <h2>{rt}</h2>
-                <h3>{sub1}</h3>
-                <p>{d1}</p> 
+    <article class="content">
+        <section class="content-grid">
+            <h2>{rt}<em>1</em></h2>
+            <h4>{sub1}</h4>
+            <p>{d1}</p> 
+        </section>
+        <MeshgradBlue />
+    </article>
 
-                <NavButtons leftLink="./rouwtaken" rightLink="./introduction-task-2" borderColor="#4DB3FF"/>
-
-            </article>
-
-            <MeshgradBlue class="meshgrad" />
-        
-      </section>
+    <BlurgradBlue customStyles="bottom: -120px; right: -100px" />
+    
+    <section class="buttons">
+        <NavButtons leftLink="./rouwtaken" rightLink="./introduction-task-2" borderColor="#4DB3FF"/>
+    </section>
 </main>
 
 <style>
-    h1, h2  { font-family: Calvino; }
-    h1      { font-size: 2em; font-weight: 600; z-index:2; max-width: 8em;}
-    h2      { font-weight: 100; font-size: 1.6em;}
-    h3      { font-weight: 100; text-wrap: nowrap; font-size: 1.3em;}
 
-    p       { color: var(--g); font-weight: 100; font-size: 1.2em;}
+    p {
+        color: var(--g);
+    }
 
-    main {
-        padding: 2rem 2rem;
-        background-color: var(--b);
-        background-image: url("/gradients/Gr-blue.png");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        color: var(--w);
-        display: flex;
-        flex-direction: column;
-        overflow-x: hidden;
-        position: relative;
-        min-height: 100dvh;
+    .intro-main {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        min-block-size: 100dvh;
+        gap: 2rem; 
+        align-items: center;
+        color: white;
+        background-color: black;
         width: 100%;
-        text-align: left;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+        padding: 2rem;
     }
 
-    header { 
-        align-items: start;
-        display: flex;
-        flex-direction: column-reverse;
-        height: 10em;
-        z-index: 10;
-        justify-content: space-between;
-        padding: 0 0 0 1em;
-    }
-
-    header a {
-        border: .1em solid var(--rt-1);
-        border-radius: .5em;
+    .intro-main a {
+        position: absolute;
+        top: 1rem;
+        left: 1.4rem;
+        border: 1px solid var(--rt-1);
+        border-radius: .9em;
         color: var(--w);
         font-size: 1em;
-        padding: .3em .6em;
+        padding: .3em .8em;
         text-decoration: none;
         width: max-content;
-      }
-
-    /* sections w. griefing-tasks */
-    #rt-1 {
-        align-items: stretch;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        padding: 1em 2em 2em 1em;
-        min-height: 100vh;
-        position: relative;
-        /* position: absolute; */
-        transition: opacity 1s ease, visibility 0.5s ease;
+    }
+    
+    .content {
+        height: 100%;
         width: 100%;
-    }
-
-    article {
         display: flex;
         flex-direction: column;
-        gap: .5em;
-        z-index: 2;
+        justify-content: flex-end;
+        padding: 0rem;
+        z-index: 100;
+        position: relative;
     }
 
-    article div { padding: 2em 0 0 0; }
-
-    section a {
-        border-radius: 50%;
-        height: 3em;
-        width: 3em;
-        padding: 0.5em;
+    .content-grid {
+        display: grid;
+        grid-template-rows: auto auto 9rem;
+        overflow: hidden;
+        position: relative;
     }
-
-    /* div w. arrows */
-    .d-a {
-        display: flex;
-        flex-direction: row;
-        gap: 1.5em;
-        justify-content: space-around;
-    }
-
-    #rt-1 a { border: .2em solid var(--rt-1); }
-
+    
 
      @media (min-width:575px) {
         p       { max-width: 20em; }
 
        header { padding: 0 0 0 3em; justify-content: space-around;}
-
-        #rt-1 { padding: .5em 4em 3em 3em; }
 
         article {
             align-items: end;

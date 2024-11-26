@@ -22,12 +22,12 @@
 
 <style>
     .nav-buttons {
-        position: absolute;
-        bottom: 35px;
         display: flex;
         justify-content: space-between;
         width: 100%;
         max-width: 7rem;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem; 
     }
 
     .nav-buttons button {

@@ -4,11 +4,12 @@
     import NavButtons from '$lib/NavButtons.svelte';
 </script>
 
+
 <main class="intro-main">
     <div class="background-image">
         <MeshBlue />
     </div>
-    <article class="intro-article">
+    <article class="content">
         <p>
             Drop & Heal is een metafoor voor het loslaten van de zware last van verdriet en het starten van een helend proces. 
             Als een druppel in het water valt, wordt het onderdeel van een groter, krachtiger geheel, dit gebeurt ook wanneer we ons verdriet delen.<br><br> 
@@ -18,42 +19,44 @@
         </p>
     </article>
 
-    <BlurgradBlue />
+    <BlurgradBlue customStyles="top: -120px; right: -100px;" />
 
-    <NavButtons leftLink="./" rightLink="./privacy" borderColor="#4DB3FF"/>
+    <section class="buttons">
+        <NavButtons leftLink="./" rightLink="./privacy" borderColor="var(--rt-1)"/>
+    </section>
 
 </main>
 
 <style>
 
-    h1, h2, h3  { font-family: Calvino-Grande;}
-    h1      { font-size: 3em; font-weight: 600; z-index:2; max-width: 8em;}
-    h2      { font-weight: 100; font-size: 48px;}
-    h3      { font-weight: 100; text-wrap: nowrap; font-size: 32px;}
-    em      { font-family: Figtree; font-weight: 100; font-size: 16px; font-style: normal; margin: 0 .25em;}
-    p       { color: var(--w); font-weight: 100; font-size: 16px; line-height: 1.5rem;}
-
-
     .intro-main {
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        min-block-size: 100dvh;
+        gap: 2rem; 
         align-items: center;
         color: white;
         background-color: black;
-        padding: 2em 0;
         width: 100%;
         height: 100vh;
+        overflow-x: hidden;
+        position: relative;
+        padding: 2rem;
     }
 
-    .intro-article {
-        padding: 0 3rem;
+    .content {
+        padding: 0 2rem;
         z-index: 100;
+        justify-content: center;
     }
 
     .background-image {
         opacity: 40%;
+    }
+
+    .buttons {
+        justify-self: center; 
+        z-index: 100;
     }
     
 </style>
