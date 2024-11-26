@@ -101,6 +101,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Figtree;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
   }
 
   html,
@@ -126,12 +129,6 @@
     font-family: dm-serif;
     src: url(../font/dm-serif/DMSerifDisplay-Regular.ttf);
     font-weight: 100;
-  }
-
-  * {
-    font-family: Figtree;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
   }
 
   *::-webkit-scrollbar {
@@ -173,12 +170,12 @@
 
   .exercises {
     display: grid;
-    grid-template-columns: 1fr; /* Standaard één kolom */
-    gap: 1.5em; /* Ruimte tussen de kaarten */
+    grid-template-columns: 1fr;
+    gap: 1.5em;
     padding: 1em;
     padding-bottom: 10em;
-    max-width: 1200px; /* Zet een maximale breedte */
-    margin: 0 auto; /* Centreert de grid */
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   .card {
@@ -189,10 +186,9 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
 
-  /* Media query voor desktop lay-out */
   @media (min-width: 1200px) {
     .exercises {
-      grid-template-columns: repeat(2, 1fr); /* Twee kolommen op desktop */
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 </style>

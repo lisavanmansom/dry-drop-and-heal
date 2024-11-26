@@ -3,9 +3,8 @@
   export let progressValue = Math.random() * 100;
   export let progressColor = "red";
   
-  let isMenuOpen = false;  // Houdt bij of het menu open is
-
-  // Functie voor toggelen van het menu
+  let isMenuOpen = false; 
+  
   function toggleMenu() {
     isMenuOpen = !isMenuOpen;
   }
@@ -112,17 +111,16 @@
     margin-right: 1em;
   }
 
-  /* Navigatie Items (voor mobiel) */
   .navigation-items {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    display: block;  /* Standaard tonen als blok op desktop */
+    display: block;
   }
 
   .navigation-items.open {
-    display: flex; /* Zichtbaar maken als het menu open is (voor mobiel) */
+    display: flex;
   }
 
   .item {
@@ -131,12 +129,12 @@
     text-decoration: none;
     padding: 1em;
     color: var(--w);
-    margin-right: 20px; /* Extra ruimte tussen items */
-    text-align: center; /* Tekst wordt gecentreerd onder de afbeelding */
-    flex-direction: column; /* Zorgt ervoor dat de afbeelding boven de tekst komt */
+    margin-right: 20px;
+    text-align: center;
+    flex-direction: column;
     transition: 0.5s all;
-    border: 2px solid transparent; /* Standaard geen border */
-    border-radius: 5px; /* Zorg voor afgeronde hoeken */
+    border: 2px solid transparent;
+    border-radius: 5px; 
   }
 
   .item img {
@@ -145,7 +143,7 @@
     background-color: #1F1F1F;
     padding: 0.2em;
     border-radius: 5px;
-    margin-bottom: 10px; /* Ruimte tussen afbeelding en tekst */
+    margin-bottom: 10px; 
   }
 
   .item:hover {
@@ -187,7 +185,6 @@
     }
   }
 
-  /* Desktop - Verberg hamburger menu */
   @media (min-width: 1201px) {
     .navigation-items {
       display: flex;
