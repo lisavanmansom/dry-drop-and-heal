@@ -3,21 +3,16 @@
    let inputMessage = '';
 
    const handleSubmit = async () => {
-        // Call the action to add a message
-        await fetch('/api/messages', {
-            method: 'POST',
-            body: new URLSearchParams({ message: inputMessage })
-        });
-        inputMessage = ''; // Clear input after submission
-    };
-  
-    // let messages = [];
-    // let newMessage = '';
-  
-    // function sendMessage() {
-    //   messages = [...messages, { text: newMessage, timestamp: new Date().getTime() }];
-    //   newMessage = '';
-    // }
+    // Verstuur het bericht als JSON
+    await fetch('/api/messages', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ message: inputMessage })
+    });
+    inputMessage = ''; // Reset het invoerveld na verzending
+};
   </script>
 
   <main>
