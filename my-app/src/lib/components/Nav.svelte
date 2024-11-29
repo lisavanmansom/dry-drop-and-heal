@@ -5,9 +5,7 @@
 <nav>
   <a 
     class="item {active === 'Vandaag' ? 'active' : ''}" 
-    href="#" 
-    onclick="active = 'Vandaag'; return false;"
-  >
+    href="#" >
     <!-- Vandaag SVG -->
     <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M0.689453 11.5345L1.37491 11.2907C7.18987 9.2232 13.5535 9.30967 19.3101 11.5345" 
@@ -21,7 +19,7 @@
   <a 
     class="item {active === 'Praten' ? 'active' : ''}" 
     href="/chatbot" 
-    onclick="active = 'Praten';"
+
   >
     <!-- Praten SVG -->
     <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,9 +31,7 @@
 
   <a 
     class="item {active === 'Drops' ? 'active' : ''}" 
-    href="#" 
-    onclick="active = 'Drops'; return false;"
-  >
+    href="#"  >
     <!-- Drops SVG -->
     <svg width="15" height="21" viewBox="0 0 15 21" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M13.4865 13.4425C13.4865 15.4743 12.8497 17.0673 11.766 18.151C10.6823 19.2346 9.08936 19.8715 7.05752 19.8715C5.02569 19.8715 3.43273 19.2346 2.34904 18.151C1.26536 17.0673 0.628522 15.4743 0.628522 13.4425C0.628522 11.3056 1.80844 8.70401 3.25929 6.34055C4.67469 4.03484 6.2798 2.06267 7.05776 1.15034C7.83556 2.06275 9.44051 4.03489 10.8558 6.34054C12.3066 8.70401 13.4865 11.3056 13.4865 13.4425Z" 
@@ -46,9 +42,7 @@
 
   <a 
     class="item {active === 'Profiel' ? 'active' : ''}" 
-    href="#" 
-    onclick="active = 'Profiel'; return false;"
-  >
+    href="#" >
     <!-- Profiel SVG -->
     <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M10 10C12.2091 10 14 8.20914 14 6C14 3.79086 12.2091 2 10 2C7.79086 2 6 3.79086 6 6C6 8.20914 7.79086 10 10 10Z" 

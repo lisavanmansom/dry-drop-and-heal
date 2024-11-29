@@ -5,13 +5,6 @@
   import Nav from "../../lib/components/Nav.svelte";
 </script>
 
-<html lang="nl">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Drop & Heal</title>
-  </head>
-
   <Header title="Het verlies aanvaarden" progressColor="#6e9158" />
 
   <main>
@@ -80,69 +73,17 @@
   </section>
 
   <Nav />
-</html>
 
 <style>
-  :root {
-    --w: #ffff;
-    --b: #111;
-    --g: #a6a6a6;
-    --rt-1: #64aac7;
-    --rt-2: #984a4a;
-    --rt-3: #6e9158;
-    --rt-4: #7c6097;
-
-    --b-2: #b26161;
-    --b-4: #9279a9;
-    --progress-bg: #595959;
-  }
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Figtree;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-  }
-
-  html,
-  body {
-    background-color: var(--b);
-    color: white;
-    width: 100%;
-  }
-
-  @font-face {
-    font-family: Calvino;
-    src: url(../font/calvino-trial/Calvino-Grande-Regular-trial.ttf);
-    font-weight: 500;
-  }
-
-  @font-face {
-    font-family: Figtree;
-    src: url(../font/figtree/Figtree-Regular.ttf);
-    font-weight: 200;
-  }
-
-  @font-face {
-    font-family: dm-serif;
-    src: url(../font/dm-serif/DMSerifDisplay-Regular.ttf);
-    font-weight: 100;
-  }
 
   *::-webkit-scrollbar {
     display: none;
   }
 
-  h1,
   h2 {
     font-family: Calvino;
   }
 
-  em {
-    font-family: dm-serif;
-  }
 
   main {
     position: relative;
@@ -178,13 +119,13 @@
     margin: 0 auto;
   }
 
-  .card {
+  /* .card {
     background-color: #252525;
     border-radius: 10px;
     padding: 1em;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
+  } */
 
   @media (min-width: 1200px) {
     .exercises {

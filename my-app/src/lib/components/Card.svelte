@@ -40,6 +40,11 @@
 
 <style>
   .card {
+    background-color: #252525;
+    border-radius: 10px;
+    padding: 1em;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     position: relative;
     padding-bottom: 4em;
     min-width: 100%;

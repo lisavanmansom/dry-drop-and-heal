@@ -28,8 +28,8 @@
     <BlurgradGreen customStyles="bottom: -120px; right: -100px" />
 
     <div class="d-a">
-      <a href="./introduction-task-3">Eigen pad</a>
-      <a href="./chatbot">Gepersonaliseerd</a>
+      <a href="./multiple-task-1">Eigen pad</a>
+      <a href="./form-intro">Gepersonaliseerd</a>
     </div>
   </main>
   
