@@ -1,6 +1,9 @@
 > [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
 # Drop and Heal / 2
+
+![image](https://github.com/user-attachments/assets/7ba3db41-728b-45fb-ac28-e74804fd9b5c)
+
 Rouw is een diep persoonlijke en vaak complexe ervaring die varieert van persoon tot persoon. Drop & Heal streeft ernaar om die leemte te vullen met een innovatieve benadering die technologie gebruikt om een gepersonaliseerd ondersteuningsprogramma te bieden dat zich aanpast aan de unieke behoeften van elke gebruiker. 
 
 ## Inhoudsopgave
