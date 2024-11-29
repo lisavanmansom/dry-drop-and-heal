@@ -1,9 +1,15 @@
-<script>
-    export let customStyles = {};
+<script>  
+import { page } from '$app/stores';
+export let pageStyle = 'default';
+export let customStyles = {};
 </script>
 
-<img src="/gradients/Meshgrad-pink.png" alt="" width="100" height="100" class="blurred-image" style="{customStyles}"/>
-
+<img 
+src="/gradients/Meshgrad-pink.png" 
+alt="" 
+width="100" height="100" 
+class={`blurred-image ${pageStyle}`}
+style="{customStyles}" />
  
 <style>
     .blurred-image {
@@ -24,5 +30,23 @@
         border-radius: 100%;
         filter: blur(200px);
         z-index: 0;
+    }
+
+    .blurred-image.form-page {
+        transform: scale(2);
+        /* animation: bg-gradient 10s linear infinite; */
+    }
+
+    @keyframes bg-gradient {
+        25% { transform: scale(1.2); }
+        50% { transform: scale(1.1); }
+        75% { transform: scale(1.2); }
+    }
+
+
+    @media (prefers-reduced-motion) {
+        .blurred-image.form-page  {
+            animation: none; 
+        }
     }
 </style>
