@@ -14,9 +14,29 @@
     {/each}
 
     <ImagesHome name="skeleton"/>
-
     <div>
-        <ImagesHome name="glass"/>
-        <ImagesHome name="glass"/>
+        <ImagesHome pageStyle="glass-home" name="glass"/>
+        <ImagesHome pageStyle="glass-home" name="glass"/>
     </div>
 </section>
+
+<style>
+    section {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 100%;
+      overflow-x: hidden;
+      position: relative;
+      text-align: center;
+      width: 100%;
+  }
+
+  article {
+    position: absolute;
+  }
+
+
+ 
+</style>
