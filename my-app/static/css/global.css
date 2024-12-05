@@ -18,6 +18,36 @@
   }
 
   @font-face {
+    font-family: Poppins;
+    src: url(../font/poppins/Poppins-Black.ttf);
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: Poppins;
+    src: url(../font/poppins/Poppins-Light.ttf);
+    font-weight: 100;
+  }
+
+  @font-face {
+    font-family: Poppins;
+    src: url(../font/poppins/Poppins-Medium.ttf);
+    font-weight: 300;
+  }
+
+  @font-face {
+    font-family: Poppins;
+    src: url(../font/poppins/Poppins-Regular.ttf);
+    font-weight: 200;
+  }
+
+  @font-face {
+    font-family: Poppins;
+    src: url(../font/poppins/Poppins-SemiBold.ttf);
+    font-weight: 400;
+  }
+
+  @font-face {
     font-family: Calvino;
     src: url(../font/calvino-trial/Calvino-Grande-Regular-trial.ttf);
     font-weight: 500;

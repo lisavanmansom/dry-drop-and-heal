@@ -44,6 +44,10 @@
         position: absolute;
     }
 
+    h2 {
+        font: italic 100 clamp(2.2rem, 10vw, 3.5rem) Poppins;
+    }
+
     section {
         flex-direction: column;
         justify-content: center;
@@ -78,8 +82,6 @@
 
     .d-g {
         z-index: 1;
-        background-color: rgb(0, 0, 0 , 0.15);
-        filter: drop-shadow(5px 5px 5px black);
     }
 
 

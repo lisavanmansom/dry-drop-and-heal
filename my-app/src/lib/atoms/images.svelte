@@ -15,6 +15,7 @@ let {name, style = '', pageStyle = {}, ...others} = $props();
 
 <style>
     .glass-home {
+        backdrop-filter: blur(20px);
         height: 50vh;
         object-fit: cover;
         width: 100%;
