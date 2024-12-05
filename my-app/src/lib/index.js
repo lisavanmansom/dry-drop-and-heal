@@ -19,3 +19,4 @@ export { default as QuestionSet } from './molecules/question-set.svelte'
 // homepage components
 export { default as ImagesHome } from './atoms/images.svelte'
 export { default as HomeBanner } from './organism/home-banner.svelte'
+export { default as GlassBanner } from './organism/glass-banner.svelte'

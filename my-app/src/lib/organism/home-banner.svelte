@@ -22,11 +22,6 @@
         <ImagesHome pageStyle="skeleton-home" name="skeleton"/>
         <ImagesHome pageStyle="skeleton-home" name="skeleton"/>
     </div>
-
-    <div class="d-g">
-        <ImagesHome pageStyle="glass-home" name="glass"/>
-        <ImagesHome pageStyle="glass-home" name="glass"/>
-    </div>
 </section>
 
 <style>
@@ -34,13 +29,13 @@
     section, .d-s {
         align-items: center;
         display: flex;
-        min-height: 100%;
+        height: 100vh;
         overflow: hidden;
         width: 100%;
     }
 
     /* w. position absolute */
-    article, .d-i, .d-s{
+    article, section, .d-i, .d-s{
         position: absolute;
     }
 
@@ -78,12 +73,5 @@
 
     .d-s {
         position: absolute;
-    }
-
-    .d-g {
-        z-index: 1;
-    }
-
-
- 
+    } 
 </style>

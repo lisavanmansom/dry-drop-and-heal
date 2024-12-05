@@ -1,8 +1,9 @@
 <script>
-    import {HomeBanner} from '$lib'
+    import {HomeBanner, GlassBanner} from '$lib'
 </script>
   
   <main>
+    <GlassBanner />
     <HomeBanner />
   </main>
 
@@ -16,7 +17,7 @@
       justify-content: center;
       min-height: 100vh;
       overflow-x: hidden;
+      position: relative;
       width: 100%;
   }
-
   </style>
