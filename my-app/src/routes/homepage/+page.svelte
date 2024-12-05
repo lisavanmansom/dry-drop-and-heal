@@ -1,13 +1,13 @@
 <script>
-    import {HomeBanner, GlassBanner} from '$lib'
+    import {HomeBanner} from '$lib'
 </script>
-  
+
   <main>
-    <GlassBanner />
     <HomeBanner />
   </main>
 
   <style>
+
     main {
       align-items: center;
       background-color: var(--b);

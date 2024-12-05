@@ -14,16 +14,9 @@ let {name, style = '', pageStyle = {}, ...others} = $props();
 {/if}
 
 <style>
-    .glass-home {
-        backdrop-filter: blur(20px);
-        height: 50vh;
-        object-fit: cover;
-        width: 100%;
-    }
-
     .skeleton-home {
         height: 100vh;
-        object-fit: cover;
+        object-fit: contain;
         width: 100vw;
     }
 
@@ -31,5 +24,50 @@ let {name, style = '', pageStyle = {}, ...others} = $props();
         height: 180vh;
         object-fit: cover;
         width: 170vw;
+    }
+
+    /* scroll driven animation glass images */
+    @keyframes sticky-parallax-header-move-and-size {
+	    from {
+		    height: 50vh;
+	    }
+	    to {
+		    background-position: 50% 100%;
+		    height: 0vh;
+            transform: translateY(-2000px);
+	    }
+    }
+
+    @keyframes sticky-parallax-header-move-and {
+	    from {
+		    height: 50vh;
+	    }
+	    to {
+		    background-position: 50% 100%;
+		    height: 0vh;
+            transform: translateY(2000px);
+	    }
+    }
+    
+    .glass-home-1, .glass-home-2 {
+        backdrop-filter: blur(20px);
+        object-fit: cover;
+        width: 100%;
+        position: fixed;
+        left: 0;
+    }
+
+    .glass-home-1 {
+        animation: sticky-parallax-header-move-and-size linear forwards;
+	    animation-timeline: scroll();
+	    animation-range: 0vh 100vh;
+        top: 0;
+    }
+
+    .glass-home-2 {
+        animation: sticky-parallax-header-move-and linear forwards;
+	    animation-timeline: scroll();
+	    animation-range: 0vh 100vh;
+        bottom: 0;
     }
 </style>
