@@ -1,19 +1,19 @@
 <script>
-    import MeshgradGreen from './meshgrad-green.svelte';
-    import MeshgradPink from './meshgrad-pink.svelte';
-    import MeshgradRed from './meshgrad-red.svelte';
+    import RisoGreen from './riso-green.svelte';
+    import RisoPink from './riso-pink.svelte';
+    import RisoRed from './riso-red.svelte';
 </script>
 
 
 <div class="rotating-container">
     <div class="meshgrad green">
-        <MeshgradGreen />
+        <RisoGreen />
     </div>
     <div class="meshgrad pink">
-        <MeshgradPink />
+        <RisoPink />
     </div>
     <div class="meshgrad red">
-        <MeshgradRed />
+        <RisoRed />
     </div>
 </div>
 
