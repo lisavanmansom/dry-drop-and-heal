@@ -4,10 +4,12 @@
     import BlurgradPink from '$lib/blurgrad-pink.svelte';
     import HeaderIntro from '$lib/HeaderIntro.svelte';
     import NavButtons from '$lib/NavButtons.svelte';
+    import MeshgradRgp from '$lib/meshgrad-rgp.svelte';
 </script>
 
 
 <main class="intro-main">
+    <MeshgradRgp />
     <!-- Privacy Section -->
     <section id="privacy" class="section">
         <HeaderIntro headerText_l1="Introductie" headerText_l2="algemeen" progressValue={10} />
@@ -59,11 +61,9 @@
 
 
 <style>
-
     .intro-main {
         display: flex;
         flex-direction: column;
-        gap: 4rem;
         color: white;
         background-color: black;
         padding: 2rem;
