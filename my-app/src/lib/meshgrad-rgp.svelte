@@ -22,26 +22,30 @@
         position: sticky;
         top: 20em;
         width: 100%;
+        height: 100vh;
         padding-left: 3rem;
-        transform-origin: center;
+        opacity: 0; 
+        animation: fadeIn auto linear both; 
+        animation-timeline: view(block);
+        animation-range: entry 0% cover 90%; 
     }
 
     .meshgrad {
         position: absolute;
-        width: 15em;
-        height: 15em;
+        width: 20em;
+        height: 20em;
+    }
+
+    .meshgrad.red {
+        animation: pulse 4s ease-in-out infinite, spinAround 8s linear infinite;
     }
 
     .meshgrad.green {
         animation: pulse 4s ease-in-out infinite, spinAround 8s linear infinite;
-    }
-
-    .meshgrad.pink {
-        animation: pulse 4s ease-in-out infinite, spinAround 8s linear infinite;
         animation-delay: -2s;
     }
 
-    .meshgrad.red {
+    .meshgrad.pink {
         animation: pulse 4s ease-in-out infinite, spinAround 8s linear infinite;
         animation-delay: -4s;
     }
@@ -65,4 +69,14 @@
             transform: scale(1.1);
         }
     }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
 </style>

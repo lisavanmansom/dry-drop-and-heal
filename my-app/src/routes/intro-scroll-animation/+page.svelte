@@ -9,8 +9,9 @@
 
 
 <main class="intro-main">
+
     <MeshgradRgp />
-    <!-- Privacy Section -->
+
     <section id="privacy" class="section">
         <HeaderIntro headerText_l1="Introductie" headerText_l2="algemeen" progressValue={10} />
         <article class="content">
@@ -22,7 +23,6 @@
         <BlurgradRed />
     </section>
 
-    <!-- Tools Section -->
     <section id="tools" class="section">
         <HeaderIntro headerText_l1="Introductie" headerText_l2="algemeen" progressValue={20} />
         <article class="content">
@@ -38,7 +38,6 @@
         <BlurgradGreen />
     </section>
 
-    <!-- Rouwtaken Section -->
     <section id="rouwtaken" class="section">
         <HeaderIntro headerText_l1="Introductie" headerText_l2="algemeen" progressValue={30} />
         <article class="content">
@@ -61,13 +60,14 @@
 
 
 <style>
+
     .intro-main {
         display: flex;
         flex-direction: column;
         color: white;
         background-color: black;
         padding: 2rem;
-        overflow: auto;
+        overflow: auto; 
     }
 
     .section {
