@@ -41,33 +41,27 @@ let {name, style = '', pageStyle = {}, ...others} = $props();
 
     /* scroll driven animation glass images */
     @keyframes sticky-parallax-header-move-and-size {
-	    from {
-		    height: 50vh;
-	    }
-	    to {
-		    background-position: 50% 100%;
-		    height: 0vh;
-            transform: translateY(-2000px);
-	    }
+
+	    from { height: 50vh; }
+	    to   { background-position: 50% 100%; 
+               height: 0vh; transform: translateY(-2000px); }
+    
     }
 
     @keyframes sticky-parallax-header-move-and {
-	    from {
-		    height: 50vh;
-	    }
-	    to {
-		    background-position: 50% 100%;
-		    height: 0vh;
-            transform: translateY(2000px);
-	    }
+
+	    from { height: 50vh; }
+	    to   { background-position: 50% 100%;
+		       height: 0vh;
+               transform: translateY(2000px); }
     }
     
     .glass-home-1, .glass-home-2 {
         backdrop-filter: blur(20px);
-        object-fit: cover;
-        width: 100%;
-        position: fixed;
         left: 0;
+        object-fit: cover;
+        position: fixed;
+        width: 100%;
     }
 
     .glass-home-1 {
@@ -85,27 +79,24 @@ let {name, style = '', pageStyle = {}, ...others} = $props();
     }
 
     @keyframes rotate-skeleton {
-        0% {
-            transform: rotateY(0deg);
-        }
-        100% {
-            transform: rotateY(360deg);
-        }
+        0% { transform: rotateY(0deg);}
+        100% { transform: rotateY(360deg);}
     }
 
     .skeleton-rotate {
+        animation: rotate-skeleton 5s infinite linear;
         height: 100vh;
         object-fit: fill;
         width: 40vw;
-        animation: rotate-skeleton 5s infinite linear;
     }
 
     .grad-homepage {
-        transform: scale(5);
         object-fit: cover;
+        transform: scale(5);
         /* animation: bg-gradient 1s linear infinite; */
     }
     
+    /* animation is off */
     @keyframes bg-gradient {
         100% { filter: drop-shadow(16px 16px 20px red) invert(75%) hue-rotate(360deg);  }
     }

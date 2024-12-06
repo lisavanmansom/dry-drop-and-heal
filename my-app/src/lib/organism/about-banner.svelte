@@ -3,15 +3,15 @@
 </script>
 
 <section>
-        <div class="pin-wrap-sticky">
-            <div class="pin-wrap">
-                {#each headings as item}
+    <div class="pin-wrap-sticky">
+        <div class="pin-wrap">
+            {#each headings as item}
                 <article class="a">
                     <h2>{item.title}</h2>
                 </article>
             {/each}
-            </div>
         </div>
+    </div>
 </section>
 
 <style>
@@ -22,15 +22,14 @@
     }
 
     article {
-        width: 100%;
+        overflow: visible;
         text-wrap: nowrap;
+        width: 100%;
     }
 
     @keyframes move {
-	to {
-		transform: translateX(calc(-100% + 100vw));
-        /* moves horizontally, right edge is aligned against viewport */
-	    }
+    /* moves horizontally, right edge is aligned against viewport */
+	to { transform: translateX(calc(-100% + 100vw));}
     }
 
     section {

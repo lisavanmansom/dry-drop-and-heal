@@ -2,39 +2,40 @@
     import {ImagesHome, HomeBanner, AboutBanner} from '$lib'
 </script>
  
-  <main>
-    <HomeBanner />
+<main>
+  <HomeBanner />
 
-    <div class="block">
-          <ImagesHome pageStyle="skeleton-rotate" name="skeleton-1"/>
-    </div>
+  <div class="block">
+    <ImagesHome pageStyle="skeleton-rotate" name="skeleton-1"/>
+  </div>
 
-    <AboutBanner />
+  <AboutBanner />
 
-    <ImagesHome pageStyle="vertebra-home" name="vertebra"/>
+  <ImagesHome pageStyle="vertebra-home" name="vertebra"/>
 
-    <div class="s">
-      <ImagesHome pageStyle="grad-homepage" name="gradient"/>
-    </div>
-  </main>
+  <div class="s">
+    <ImagesHome pageStyle="grad-homepage" name="gradient"/>
+  </div>
+</main>
 
-  <style>
-    .s {
-      transform: scale(5);
-      position: absolute;
-      top: 0;
-    }
-    main {
-      align-items: center;
-      background-color: var(--b);
-      color: var(--w);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      min-height: 100vh;
-      overflow-x: hidden;
-      position: relative;
-      width: 100%;
+<style>
+  main {
+    align-items: center;
+    background-color: var(--b);
+    color: var(--w);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  .s {
+    position: absolute;
+    top: 0;
+    transform: scale(5);
   }
 
   .block {
@@ -48,12 +49,8 @@
   }
 
   @keyframes sticky-rotate-skeleton {
-	    from {
-        transform: translateY(0vh);
-	    }
-	    to {
-        transform: translateY(100vh);
-	    }
+	    from {  transform: translateY(0vh);}
+	    to { transform: translateY(100vh); }
     }
 
-  </style>
+</style>

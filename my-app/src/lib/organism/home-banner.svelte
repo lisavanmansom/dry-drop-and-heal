@@ -1,8 +1,5 @@
 <script>
     import {ImagesHome} from '../index.js';
-    
-    // filter needs to be changed
-    let headings = [{ title: "drop and heal", filter: "drop-shadow(16px 16px 20px red) saturate(1000%) contrast(100%) blur(10px)" }, { title: "Het verlies aanvaarden", filter: "sepia(50%)" }, { title: "De pijn doorvoelen", filter: "sepia(50%)" }, { title: "Verder in verandering", filter: "sepia(50%)" }, { title: "emotioneel verder gaan", filter: "sepia(50%)" }]
 </script>
 
 <section>
@@ -16,27 +13,17 @@
     section {
         align-items: center;
         display: flex;
+        flex-direction: column;
         height: 120vh;
+        justify-content: center;
         overflow: hidden;
+        position: relative;
+        text-align: center;
         width: 100%;
     }
 
-    .view 
-        { position: absolute; }
-
-
-    section {
-        position: relative;
-    }
-
-    section {
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-    }
-
     .view {
+        position: absolute;
         z-index: 2;
     }
 </style>
