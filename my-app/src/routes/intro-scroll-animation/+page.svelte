@@ -60,29 +60,29 @@
 
 <style>
 
-.intro-main {
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-    color: white;
-    background-color: black;
-    padding: 2rem;
-    overflow: auto;
-}
+    .intro-main {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        color: white;
+        background-color: black;
+        padding: 2rem;
+        overflow: auto;
+    }
 
-.section {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
-}
+    .section {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        min-height: 100vh;
+    }
 
-.content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    text-align: left;
-    padding: 2rem;
-}
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        text-align: left;
+        padding: 2rem;
+    }
 
 </style>
 
