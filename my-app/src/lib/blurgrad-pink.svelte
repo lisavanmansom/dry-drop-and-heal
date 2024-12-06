@@ -4,12 +4,7 @@ export let pageStyle = 'default';
 export let customStyles = {};
 </script>
 
-<img 
-src="/gradients/Meshgrad-pink.png" 
-alt="" 
-width="100" height="100" 
-class={`blurred-image ${pageStyle}`}
-style="{customStyles}" />
+<img src="/gradients/Meshgrad-pink.png" alt="" width="100" height="100" class={`blurred-image ${pageStyle}`} style="{customStyles}" />
  
 <style>
     .blurred-image {

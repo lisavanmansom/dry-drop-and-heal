@@ -62,6 +62,7 @@
   h4      { font-family: Figtree; font-size: 20px; margin-bottom: 0.5rem;}
   em      { font-family: 'Times New Roman', Times, serif; font-weight: 800; font-size: 48px; font-style: normal; margin: 0 .25em;}
   p       { color: var(--w); font-weight: 100; font-size: 16px; line-height: 1.5rem;}
+  body    { margin: 0; padding: 0;}
 
 .intro-main {
   display: grid;

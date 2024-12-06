@@ -22,7 +22,7 @@
     <BlurgradBlue customStyles="top: -120px; right: -100px;" />
 
     <section class="buttons">
-        <NavButtons leftLink="./" rightLink="./privacy" borderColor="var(--rt-1)"/>
+        <NavButtons leftLink="./" rightLink="./intro-scroll-animation" borderColor="var(--rt-1)"/>
     </section>
 
 </main>
@@ -39,7 +39,6 @@
         background-color: black;
         width: 100%;
         height: 100vh;
-        overflow-x: hidden;
         position: relative;
         padding: 2rem;
     }
