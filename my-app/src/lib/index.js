@@ -15,3 +15,6 @@ export { default as ArrowR } from './arrow-r.svelte'
 export { default as QuestionForm } from './organism/question-form.svelte'
 export { default as QuestionOption } from './atoms/question-option.svelte'
 export { default as QuestionSet } from './molecules/question-set.svelte'
+
+// image files
+export { default as ErrorImg } from './atoms/images-error.svelte'
