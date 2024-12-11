@@ -15,11 +15,14 @@
     {:else if name == 'an4'}
     <img src="/images/an-4.png" class={pageStyle} alt="" width="100" height="100" style={style} loading="lazy" /> <!--no alt text needed-->
     
+    {:else if name == 'an5'}
+    <img src="/images/an-5.png" class={pageStyle} alt="" width="100" height="100" style={style} loading="lazy" /> <!--no alt text needed-->
+
     {:else if name == 'an6'}
     <img src="/images/an-6.png" class={pageStyle} alt="" width="100" height="100" style={style} loading="lazy" /> <!--no alt text needed-->
    
     {:else if name == 'an8'}
-    <img src="/images/an-6.png" class={pageStyle} alt="" width="100" height="100" style={style} loading="lazy" /> <!--no alt text needed-->
+    <img src="/images/an-8.png" class={pageStyle} alt="" width="100" height="100" style={style} loading="lazy" /> <!--no alt text needed-->
     
     <!--background elements / trees etc-->
     {:else if name == 'hillBG'}
@@ -66,6 +69,7 @@
     {/if}
     
     <style>
+       /* section 1 */
         .scaryLady {
             bottom: 0;
             height: 85%;
@@ -97,6 +101,152 @@
             width: 90vw;
             height: 40vh;
         }
+
+        /* section 2 */
+        .an1, .an2, .an3, .an4, .an5, .an6, .an8 {
+            position: absolute;
+            z-index: 3;
+        }
+
+        .an1 {
+            bottom: -10vh;
+            height: 80vh;
+            width: 100%;
+            object-fit: contain;
+            z-index: 4;
+        }
+
+        .an2 {
+            bottom: 22vh;
+            right: 14vw;
+            height: 10vh;
+            width: 20%;
+            transform: rotate(22deg);
+            object-fit: contain;
+        }
+
+        .an3 {
+            bottom: 0vh;
+            height: 25vh;
+            left: -30vw;
+            width: 100%;
+            object-fit: contain;
+        }
         
+        .an4 {
+            height: 19vh;
+            bottom: 17.4vh;
+            right: 24vw;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .an5 {
+            height: 35vh;
+            top: 17vh;
+            right: 25vw;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .an6 {
+            height: 60vh;
+            bottom: -16vh;
+            left: 36vw;
+            object-fit: contain;
+            width: 100%;
+        }
+
+        .an8 {
+            height: 30vh;
+            top: 24vh;
+            left: 28vw;
+            object-fit: contain;
+            width: 100%;
+        }
+
+        .text-2 {
+            z-index: 0;
+        }
+
+        .z-dex {
+            z-index: 2;
+        }
+
+        .treewomen {
+            position: absolute;
+            height: 160vh;
+            width: 50vw;
+            object-fit: cover;
+            z-index: 1;
+        }
+        
+        /* section 3 */
+        .heads, .heads-invert, .cross {
+            position: absolute;
+            z-index: 3;
+        }
+
+        .big-trees-invert {
+            bottom: 0;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+        }
+
+        .hillBG {
+            bottom: -10vh;
+            height: 80%;
+            position: absolute;
+            width: 100%;
+            z-index: 3;
+            object-fit: cover;
+        }
+
+        .heads {
+            bottom: 10vh;
+            right: 35vw;
+            height: 50vh;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .heads-invert {
+            bottom: -10vh;
+            left: 0vw;
+            height: 50vh;
+            width: 100%;
+            object-fit: contain;
+            transform: scaleX(-1);
+        }
+
+        .cross {
+            bottom: 37vh;
+            z-index: 2;
+            right: 2vw;
+            height: 50vh;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .treewomen3l {
+            position: absolute;
+            height: 50vh;
+            width: 100%;
+            bottom: 25vh;
+            right: 20vw;
+            object-fit: contain;
+            z-index: 2;
+        }
+
+        .treewomen3r {
+            position: absolute;
+            height: 50vh;
+            width: 100%;
+            bottom: 25vh;
+            left: 10vw;
+            object-fit: contain;
+            z-index: 2;
+        }
     </style>
     
