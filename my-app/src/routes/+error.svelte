@@ -1,9 +1,9 @@
 <script>
-	import { page } from '$app/stores';
+
 </script>
 
 <main>
-    <h1>{$page.status} {$page.error.message}</h1>
+    <h1>error</h1>
     <section id="1">
         <h2>Error</h2>
         <article>
