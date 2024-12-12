@@ -1,13 +1,19 @@
 <script lang="ts">
     import { onNavigate } from '$app/navigation';
 
-    onNavigate((navigation) => {
+    function delayNavigation() {
+        return new Promise((resolve) => setTimeout(resolve, 100));
+    }
 
-        if (!document.startViewTransition) return;
+    onNavigate(async (navigation) => {
+        if (!document.startViewTransition) {
+            await delayNavigation();
+            return;
+        } 
 
-        return new Promise(resolve => {
-
+        return new Promise((resolve) => {
             document.startViewTransition(async () => {
+                await delayNavigation();
                 resolve();
                 await navigation.complete;
             });

@@ -1,32 +1,46 @@
-<script>
+<script lang="ts">
         import {ErrorImg} from '$lib'
 
         let current = 1;
+
+  const navigateTo = (hash: string, target: number) => {
+      if (!document.startViewTransition) {
+          current = target;
+          document.querySelector(hash)?.scrollIntoView({ behavior: 'smooth' });
+          return;
+      }
+
+      document.startViewTransition(() => {
+            current = target;
+            document.querySelector(hash)?.scrollIntoView({ behavior: 'smooth' });
+        
+        });
+  };
 </script>
 
 <main>
     <h1 style="display: none;">error</h1>
-    <section id="s-1" class:show={current === 1} class:hide={current != 1}>
+    <section id="s-1" data-view-transition="slide-in-bottom" class={current === 1 ? 'active slide-in' : 'slide-out'}>
         <h2><ErrorImg name="text" pageStyle="text"/></h2>
         <article>
             <h3>oops... you've reached the error page</h3>
             <p>to return to the site, <span>go through the forest and do no turn left</span></p>
             <a href="./multiple-task-1"><p>or click here</p></a>
-            <a href="#s-2" on:click={() => current = 2}><ErrorImg name="circle" pageStyle="circle"/></a>
+            <a href="#s-2" on:click={() => navigateTo('#s-2', 2)}><ErrorImg name="circle" pageStyle="circle"/></a>
             <ErrorImg name="scaryLady" pageStyle="scaryLady"/>
         </article>
         <ErrorImg name="treesBG" pageStyle="error-trees"/>
         <ErrorImg name="treesBG" pageStyle="error-trees-invert"/>
     </section>
 
-    <section id="s-2" class:show={current === 2} class:hide={current != 2}>
+    <section id="s-2" data-view-transition="slide-in-bottom" class={current === 2 ? 'active slide-in' : 'slide-out'}>
         <h2><ErrorImg name="text" pageStyle="text text-2"/></h2>
         <article>
             <h3>oops... you've reached the error page</h3>
             <p>to return to the site, <span>go through the forest and do no turn left</span></p>
         </article>
 
-        <a href="#s-3" on:click={() => current = 3}><ErrorImg name="circle" pageStyle="circle"/></a>
+        <a href="#s-3" on:click={() => navigateTo('#s-3', 3)}><ErrorImg name="circle" pageStyle="circle"/></a>
 
         <ErrorImg name="treesBG" pageStyle="error-trees z-dex"/>
         <ErrorImg name="treesBG" pageStyle="error-trees-invert z-dex"/>
@@ -41,10 +55,10 @@
         <ErrorImg name="an8" pageStyle="an8"/>
     </section>
 
-    <section id="s-3" class:show={current === 3} class:hide={current != 3}>
+    <section id="s-3" data-view-transition="slide-in-bottom" class={current === 3 ? 'active slide-in' : 'slide-out'}>
         <h2><ErrorImg name="text" pageStyle="text"/></h2>
 
-        <a href="#s-1" on:click={() => current = 1}><ErrorImg name="circle" pageStyle="circle"/></a>
+        <a href="#s-1" on:click={() => navigateTo('#s-1', 1)}><ErrorImg name="circle" pageStyle="circle"/></a>
 
         <ErrorImg name="treesBG" pageStyle="big-trees-invert z-dex"/>
         <ErrorImg name="hillBG" pageStyle="hillBG"/>
@@ -76,6 +90,11 @@
         overflow: hidden;
         position: absolute;
         width: 100vw;
+
+        visibility: hidden;
+        transform: translateY(100%);
+     
+
     }
 
     section:nth-of-type(2) {
@@ -142,13 +161,36 @@
         bottom: 0vh;
     }
 
-    .show {
+    section.active {
         opacity: 1;
         visibility: visible;
+        transform: translateY(0);
     }
 
-    .hide {
-        opacity: 0;
-        visibility: hidden;
-     }
+    section.slide-in {
+        animation: slide-in 0.5s ease forwards;
+    }
+
+    section.slide-out {
+        animation: slide-out 0.5s ease forwards;
+    }
+
+    @keyframes slide-in {
+        from {
+            transform: translateY(100%);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes slide-out {
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(-100%);
+    }
+}
+
 </style>

@@ -42,7 +42,7 @@
     <img src="/images/heads.png" class={pageStyle} alt="" width="100" height="100" style={style} loading="lazy" /> <!--no alt text needed-->
     
     {:else if name == 'scaryLady'}
-    <img src="/images/IMG-3273.png" class={pageStyle} alt="" width="100" height="100" style={style} loading="lazy" /> <!--no alt text needed-->
+    <img data-view-transition="scaryLady" src="/images/IMG-3273.png" class={pageStyle} alt="" width="100" height="100" style={style} loading="lazy" /> <!--no alt text needed-->
     
     {:else if name == 'bird'}
     <img src="/images/IMG-3275.png" class={pageStyle} alt="" width="100" height="100" style={style} loading="lazy" /> <!--no alt text needed-->
@@ -68,185 +68,200 @@
         fill="#F3DE8B"/></svg>        
     {/if}
     
-    <style>
-       /* section 1 */
-        .scaryLady {
-            bottom: 0;
-            height: 85%;
-            object-fit: cover;
-            position: absolute;
-            width: 50%;
-            z-index: 1;
-        }
+<style>
+    /* section 1 */
+    .scaryLady {
+        bottom: 0;
+        height: 85%;
+        object-fit: cover;
+        position: absolute;
+        width: 50%;
+        z-index: 1;
+    }
 
-        .error-trees, .error-trees-invert {
-            bottom: 0;
-            height: 100%;
-            position: absolute;
-            width: 50%;
-        }
-        .error-trees {
-            left: 0;
-        }
-        .error-trees-invert {
-            transform: scaleX(-1);
-            right: 0;
-        }
+    .error-trees, .error-trees-invert {
+        bottom: 0;
+        height: 100%;
+        position: absolute;
+        width: 50%;
+    }
 
-        .circle {
-            width: 2em;
-        }
+    .error-trees {
+        left: 0;
+    }
+    .error-trees-invert {
+        transform: scaleX(-1);
+        right: 0;
+    }
 
-        .text {
-            width: 90vw;
-            height: 40vh;
-        }
+    .circle {
+        width: 2em;
+    }
 
-        /* section 2 */
-        .an1, .an2, .an3, .an4, .an5, .an6, .an8 {
-            position: absolute;
-            z-index: 3;
-        }
+    .text {
+        width: 90vw;
+        height: 40vh;
+    }
 
-        .an1 {
-            bottom: -10vh;
-            height: 80vh;
-            width: 100%;
-            object-fit: contain;
-            z-index: 4;
-        }
+    /* section 2 */
+    .an1, .an2, .an3, .an4, .an5, .an6, .an8 {
+        position: absolute;
+        z-index: 3;
+    }
 
-        .an2 {
-            bottom: 22vh;
-            right: 14vw;
-            height: 10vh;
-            width: 20%;
-            transform: rotate(22deg);
-            object-fit: contain;
-        }
+    .an1 {
+        bottom: -10vh;
+        height: 80vh;
+        width: 100%;
+        object-fit: contain;
+        z-index: 4;
+    }
 
-        .an3 {
-            bottom: 0vh;
-            height: 25vh;
-            left: -30vw;
-            width: 100%;
-            object-fit: contain;
-        }
+    .an2 {
+        bottom: 22vh;
+        right: 14vw;
+        height: 10vh;
+        width: 20%;
+        transform: rotate(22deg);
+        object-fit: contain;
+    }
+
+    .an3 {
+        bottom: 0vh;
+        height: 25vh;
+        left: -30vw;
+        width: 100%;
+        object-fit: contain;
+    }
         
-        .an4 {
-            height: 19vh;
-            bottom: 17.4vh;
-            right: 24vw;
-            width: 100%;
-            object-fit: contain;
-        }
+    .an4 {
+        height: 19vh;
+        bottom: 17.4vh;
+        right: 24vw;
+        width: 100%;
+        object-fit: contain;
+    }
 
-        .an5 {
-            height: 35vh;
-            top: 17vh;
-            right: 25vw;
-            width: 100%;
-            object-fit: contain;
-        }
+    .an5 {
+        height: 35vh;
+        top: 17vh;
+        right: 25vw;
+        width: 100%;
+        object-fit: contain;
+    }
 
-        .an6 {
-            height: 60vh;
-            bottom: -16vh;
-            left: 36vw;
-            object-fit: contain;
-            width: 100%;
-        }
+    .an6 {
+        height: 60vh;
+        bottom: -16vh;
+        left: 36vw;
+        object-fit: contain;
+        width: 100%;
+    }
 
-        .an8 {
-            height: 30vh;
-            top: 24vh;
-            left: 28vw;
-            object-fit: contain;
-            width: 100%;
-        }
+    .an8 {
+        height: 30vh;
+        top: 24vh;
+        left: 28vw;
+        object-fit: contain;
+        width: 100%;
+    }
 
-        .text-2 {
-            z-index: 0;
-        }
+    .text-2 {
+        z-index: 0;
+    }
 
-        .z-dex {
-            z-index: 2;
-        }
+    .z-dex {
+        z-index: 2;
+    }
 
-        .treewomen {
-            position: absolute;
-            height: 160vh;
-            width: 50vw;
-            object-fit: cover;
-            z-index: 1;
-        }
+    .treewomen {
+        position: absolute;
+        height: 160vh;
+        width: 50vw;
+        object-fit: cover;
+        z-index: 1;
+    }
         
-        /* section 3 */
-        .heads, .heads-invert, .cross {
-            position: absolute;
-            z-index: 3;
-        }
+/* section 3 */
+.heads, .heads-invert, .cross {
+    position: absolute;
+    z-index: 3;
+}
 
-        .big-trees-invert {
-            bottom: 0;
-            height: 100%;
-            position: absolute;
-            width: 100%;
-        }
+.big-trees-invert {
+    bottom: 0;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
 
-        .hillBG {
-            bottom: -10vh;
-            height: 80%;
-            position: absolute;
-            width: 100%;
-            z-index: 3;
-            object-fit: cover;
-        }
+.hillBG {
+    bottom: -10vh;
+    height: 80%;
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+    object-fit: cover;
+}
 
-        .heads {
-            bottom: 10vh;
-            right: 35vw;
-            height: 50vh;
-            width: 100%;
-            object-fit: contain;
-        }
+.heads {
+    bottom: 10vh;
+    right: 35vw;
+    height: 50vh;
+    width: 100%;
+    object-fit: contain;
+}
 
-        .heads-invert {
-            bottom: -10vh;
-            left: 0vw;
-            height: 50vh;
-            width: 100%;
-            object-fit: contain;
-            transform: scaleX(-1);
-        }
+.heads-invert {
+    bottom: -10vh;
+    left: 0vw;
+    height: 50vh;
+    width: 100%;
+    object-fit: contain;
+    transform: scaleX(-1);
+}
 
-        .cross {
-            bottom: 37vh;
-            z-index: 2;
-            right: 2vw;
-            height: 50vh;
-            width: 100%;
-            object-fit: contain;
-        }
+.cross {
+    bottom: 37vh;
+    z-index: 2;
+    right: 2vw;
+    height: 50vh;
+    width: 100%;
+    object-fit: contain;
+}
 
-        .treewomen3l {
-            position: absolute;
-            height: 50vh;
-            width: 100%;
-            bottom: 25vh;
-            right: 20vw;
-            object-fit: contain;
-            z-index: 2;
-        }
+    .treewomen3l {
+        position: absolute;
+        height: 50vh;
+        width: 100%;
+        bottom: 25vh;
+        right: 20vw;
+        object-fit: contain;
+        z-index: 2;
+    }
 
-        .treewomen3r {
-            position: absolute;
-            height: 50vh;
-            width: 100%;
-            bottom: 25vh;
-            left: 10vw;
-            object-fit: contain;
-            z-index: 2;
+    .treewomen3r {
+        position: absolute;
+        height: 50vh;
+        width: 100%;
+        bottom: 25vh;
+        left: 10vw;
+        object-fit: contain;
+        z-index: 2;
+    }
+
+    @keyframes slide-in-bottom {
+        0% {
+            transform: scale(0);
         }
-    </style>
+        75% {
+        transform: scale(2);
+        }
+    }
+
+    img[data-view-transition="scaryLady"] {
+        animation: slide-in-bottom .25s ease-out 3s;
+    }
+
+</style>
     
