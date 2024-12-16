@@ -29,9 +29,12 @@
     <img src="/images/2-bg.png" class={pageStyle} alt="" width="100" height="100" style={style} loading="lazy" /> <!--no alt text needed-->
     
     {:else if name == 'forestBG'}
-    <img src="/images/forest-trees.png" class={pageStyle} alt="" width="100" height="100" style={style} loading="lazy" /> <!--no alt text needed-->
+    <img src="/images/forest-trees.jpg" class={pageStyle} alt="" width="100" height="100" style={style} loading="lazy" /> <!--no alt text needed-->
     
     {:else if name == 'treesBG'}
+    <img src="/images/green-trees.png" class={pageStyle} alt="" width="100" height="100" style={style} loading="lazy" /> <!--no alt text needed-->
+    
+    {:else if name == 'treesBG-invert'}
     <img src="/images/green-trees.png" class={pageStyle} alt="" width="100" height="100" style={style} loading="lazy" /> <!--no alt text needed-->
    
     <!--image elements-->
@@ -166,6 +169,14 @@
         width: 100%;
     }
 
+    .forestBG {   
+        height: 100dvh;    
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        z-index: -1;
+    }
+
     .text-2 {
         z-index: 0;
     }
@@ -250,18 +261,32 @@
         z-index: 2;
     }
 
-    @keyframes slide-in-bottom {
-        0% {
-            transform: scale(0);
+    @keyframes slide-in-left {
+        from {
+            transform: translateX(-100%);
         }
-        75% {
-        transform: scale(2);
+        to {
+            transform: translateX(0%);
         }
     }
 
-    img[data-view-transition="scaryLady"] {
-        animation: slide-in-bottom .25s ease-out 3s;
+    @keyframes slide-in-right {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0%);
+        }
     }
+
+    img[data-view-transition="treesBG-left"] {
+        animation: slide-in-left 2s ease-out;
+    }
+
+    img[data-view-transition="treesBG-right"] {
+        animation: slide-in-right 2s ease-out;
+    }
+
 
 </style>
     
