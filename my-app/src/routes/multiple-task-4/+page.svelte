@@ -6,8 +6,16 @@
   import { onMount } from "svelte";
   import { initRainbowScroll } from "../../lib/rainbowScroll.js";
 
+  function startViewTransition() {
+    if (document.startViewTransition) {
+      document.startViewTransition(() => {
+      });
+    }
+  }
+
   onMount(() => {
     initRainbowScroll(".card");
+    startViewTransition();
   });
 </script>
 

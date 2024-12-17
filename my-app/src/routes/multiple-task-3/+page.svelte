@@ -6,11 +6,9 @@
   import { onMount } from "svelte";
   import { initRainbowScroll } from "../../lib/rainbowScroll.js";
 
-  // Functie om een view transition te starten
   function startViewTransition() {
     if (document.startViewTransition) {
       document.startViewTransition(() => {
-        // Inhoud opnieuw renderen
       });
     }
   }
