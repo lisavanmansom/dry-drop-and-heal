@@ -105,5 +105,37 @@
 
 ::view-transition-old(root),
 ::view-transition-new(root) {
-  animation-duration: 1s;
+  animation-duration: 700ms;
+  animation-timing-function: ease-in-out;
 }
+
+::view-transition-old(root) {
+  animation-name: blur-out;
+}
+
+::view-transition-new(root) {
+  animation-name: blur-in;
+}
+
+@keyframes blur-out {
+  from {
+    opacity: 1;
+    filter: blur(0);
+  }
+  to {
+    opacity: 0;
+    filter: blur(20px);
+  }
+}
+
+@keyframes blur-in {
+  from {
+    opacity: 0;
+    filter: blur(20px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+

@@ -47,7 +47,6 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     position: relative;
     padding-bottom: 4em;
-    width: 30em;
     min-width: 100%;
     gap: 5em;
   }
