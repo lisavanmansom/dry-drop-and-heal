@@ -1,11 +1,14 @@
 <script>
-    import MeshBlue from '$lib/meshgrad-blue-static.svelte';
+    import MeshCarousel from '$lib/molecules/meshgrad-carousel.svelte';
 </script>
 
 
 <main>
-    <MeshBlue />
-    <article class="content">
+    <div class="animation-carousel">
+        <MeshCarousel />
+    </div>
+
+    <article class="main-content">
         <h1>Drop <br> & Heal</h1>
         <p>
             Welkom bij Drop & Heal. Een veilige plek voor jouw reis door rouwverwerking.<br><br>
@@ -19,6 +22,7 @@
 <style>
 
     main {
+        position: relative;
         overflow: hidden;
         display: flex;
         flex-direction: column;
@@ -37,14 +41,21 @@
         margin-bottom: 2rem;
     }
 
-    .content {
+    .main-content {
         padding: 11rem 2rem 3rem 2rem;
         z-index: 100;
         justify-content: center;
     }
     
-    .content p {
+    .main-content p {
         padding-right: 3rem;
+    }
+
+    .animation-carousel {
+        position: absolute; 
+        width: 100%;
+        height: 100%;
+        z-index: 0;
     }
 
     .start-button {
@@ -71,6 +82,21 @@
 
     .start-button:active {
         background-color: rgba(245, 245, 245, 0.2);
+    }
+
+    @media (min-width: 48rem){
+        .animation-carousel {
+            left: 20rem;
+            top: 10rem;
+        }
+    }
+
+    @media (min-width: 65rem){
+        .animation-carousel {
+            left: 40rem;
+            top: 10rem;
+
+    }
     }
 
 </style>

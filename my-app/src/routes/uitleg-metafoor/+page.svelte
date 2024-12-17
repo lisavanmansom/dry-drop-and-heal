@@ -9,7 +9,7 @@
     <div class="background-image">
         <MeshBlue />
     </div>
-    <article class="content">
+    <article class="intro-content">
         <p>
             Drop & Heal is een metafoor voor het loslaten van de zware last van verdriet en het starten van een helend proces. 
             Als een druppel in het water valt, wordt het onderdeel van een groter, krachtiger geheel, dit gebeurt ook wanneer we ons verdriet delen.<br><br> 
@@ -21,7 +21,7 @@
 
     <BlurgradBlue customStyles="top: -120px; right: -100px;" />
 
-    <section class="buttons">
+    <section class="intro-buttons">
         <NavButtons leftLink="./" rightLink="./privacy" borderColor="var(--rt-1)"/>
     </section>
 
@@ -29,22 +29,7 @@
 
 <style>
 
-    .intro-main {
-        display: grid;
-        grid-template-rows: auto 1fr auto;
-        min-block-size: 100dvh;
-        gap: 2rem; 
-        align-items: center;
-        color: white;
-        background-color: black;
-        width: 100%;
-        height: 100vh;
-        overflow-x: hidden;
-        position: relative;
-        padding: 2rem;
-    }
-
-    .content {
+    .intro-content {
         padding: 0 2rem;
         z-index: 100;
         justify-content: center;
@@ -54,9 +39,20 @@
         opacity: 40%;
     }
 
-    .buttons {
-        justify-self: center; 
-        z-index: 100;
+    @media (min-width: 48rem){
+        .intro-content {
+            padding: 0 7rem;
+            z-index: 100;
+            justify-content: center;
+        }
+    }
+
+    @media (min-width: 65rem){
+        .intro-content {
+            padding: 0 14rem;
+            z-index: 100;
+            justify-content: center;
+        }
     }
     
 </style>

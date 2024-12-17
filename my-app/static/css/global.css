@@ -79,7 +79,7 @@
   padding: 2rem;
 }
 
-.content {
+.intro-content {
   height: 100%;
   width: 100%;
   display: flex;
@@ -90,14 +90,14 @@
   position: relative;
 }
 
-.content-grid {
+.intro-content-grid {
   display: grid;
   grid-template-rows: auto 11rem;
   overflow: hidden;
   position: relative;
 }
 
-.buttons {
+.intro-buttons {
   justify-self: center; 
   z-index: 100;
 }

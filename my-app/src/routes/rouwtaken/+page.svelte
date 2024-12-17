@@ -6,8 +6,8 @@
 
 <main class="intro-main">
     <HeaderIntro headerText_l1="Introductie" headerText_l2="algemeen" progressValue={30} />
-    <article class="content">
-        <section class="content-grid">
+    <article class="intro-content">
+        <section class="introcontent-grid">
             <h2>Rouwtaken</h2>
             <p>
                 Onze methode is gebaseerd op de erkende rouwtaken van William Worden, Amerikaans rouwexpert, 
@@ -19,7 +19,7 @@
 
     <BlurgradPink />
 
-    <section class="buttons">
+    <section class="intro-buttons">
         <NavButtons leftLink="./tools" rightLink="./introduction-task-1" borderColor="var(--rt-4)"/>
     </section>
 
