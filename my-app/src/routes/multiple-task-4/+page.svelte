@@ -79,8 +79,13 @@
     display: none;
   }
 
+  body {
+    background: rgb(17, 17, 17);
+  }
+
   h2 {
     font-family: Calvino;
+    font-size: 2em;
   }
 
   main {
@@ -109,21 +114,13 @@
 
   .exercises {
     display: grid;
+    background-color: rgb(17, 17, 17);
     grid-template-columns: 1fr;
     gap: 1.5em;
     padding: 1em;
     padding-bottom: 10em;
-    max-width: 1200px;
     margin: 0 auto;
   }
-
-  /* .card {
-    background-color: #252525;
-    border-radius: 10px;
-    padding: 1em;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  } */
 
   @media (min-width: 1200px) {
     .exercises {
