@@ -136,7 +136,7 @@
   h3 {
     color: white;
     margin-top: 0.2em;    
-    margin-bottom: 0.2em;
+    margin-bot: 0.2em;
 
   }
 </style>

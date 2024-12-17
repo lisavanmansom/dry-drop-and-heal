@@ -3,6 +3,12 @@
   import Card from "../../lib/components/Card.svelte";
   import { MeshgradRed } from "$lib";
   import Nav from "../../lib/components/Nav.svelte";
+  import { onMount } from "svelte";
+  import { initRainbowScroll } from "../../lib/rainbowScroll.js";
+
+  onMount(() => {
+    initRainbowScroll(".card");
+  });
 </script>
 
   <Header title="Het verlies aanvaarden" progressColor="#984a4a" />
