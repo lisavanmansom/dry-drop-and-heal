@@ -31,14 +31,12 @@
 
   label:has(input[type=radio]:hover) {
     background-color: var(--b-h);
-    border: .1em solid var(--w);
-    color: var(--b);
+    border: .1em solid var(--b-h);
+
   }
 
   label:has(input[type=radio]:checked) {
-    background-color: var(--w);
-    border: .1em solid var(--w);
-    color: var(--b);
+    background-color: var(--b-z);
   }
 
   label:focus-within {

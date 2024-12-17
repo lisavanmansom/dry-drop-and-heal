@@ -108,15 +108,13 @@
   }
 
   button:active {
-    background-color: var(--w);
-    border: .1em solid var(--w);
-    color: var(--b);
+    background-color: var(--b-z);
+    border: .1em solid var(--b-z);
   }
 
   button:hover {
     background-color: var(--b-h);
-    border: .1em solid var(--w);
-    color: var(--b);
+    border: .1em solid var(--b-z);
   }
 
   button:focus-within {

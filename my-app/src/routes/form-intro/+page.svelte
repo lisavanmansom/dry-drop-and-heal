@@ -1,6 +1,5 @@
 <script>
-  import {BlurgradPink, QuestionForm} from '$lib'
-  
+  import {BlurgradRed, QuestionForm, ChristmasGradient } from '$lib'
 </script>
   
 <main>
@@ -18,13 +17,17 @@
   <QuestionForm />
 
   <div aria-hidden="true">
-    <BlurgradPink pageStyle="form-page" />
+    <BlurgradRed pageStyle="form-page" />
   </div>
 
   <div aria-hidden="true">
-    <BlurgradPink pageStyle="form-page"/>
+    <BlurgradRed pageStyle="form-page"/>
   </div>
 </main>
+
+<div class="tree" aria-hidden="true">
+  <ChristmasGradient/>
+</div>
   
 <style>
   h1  { font-family: Calvino; z-index: 10; }
@@ -32,11 +35,12 @@
   h1  { font-size: clamp(2.2rem, 10vw, 3.5rem); font-weight: 600;}
   h2  { font-weight: 100; font-size:clamp(1.6rem, 5vw, 2rem);}
   
-  p   { color:var(--b-h); font-weight: 100; font-size:clamp(1rem, 5vw, 1.2rem); font-style: italic;}
+  p   { color:var(--w); font-weight: 100; font-size:clamp(1rem, 5vw, 1.2rem); font-style: italic;}
 
   main {
     align-items: center;
     background-color: var(--b);
+    box-shadow: inset 0px 100px 300px rgb(255, 0, 0);
     color: var(--w);
     display: flex;
     flex-direction: column;
@@ -50,14 +54,15 @@
     width: 100%;
   }
 
-  div:nth-of-type(1), hgroup {
+
+  main div:nth-of-type(1), hgroup {
     display: flex;
     flex-direction: column;
     gap: 1em;
     z-index: 10;
   }
 
-  div:nth-of-type(1) {
+  main div:nth-of-type(1) {
     gap: 2em;
   }
 
@@ -83,14 +88,23 @@
 
 
   div:nth-of-type(2) {
+    opacity: .5;
     position: absolute;
     top: 33em;
     transform: matrix(0, 1, 1, 0, 0, 0);
   }
 
   div:nth-of-type(3) {
+    opacity: .5;
     position: absolute;
     right: 0em;
     bottom: 0em;
+  }
+
+  .tree {
+    top: 0;
+    position: fixed;
+    min-height: 100vh;
+    width: 100vw;
   }
 </style>

@@ -1,5 +1,6 @@
 <script>
-  import QuestionOption from '../atoms/question-option.svelte';
+
+  import { QuestionOption } from '$lib'
   let {name, index, currentStep, value, labelText, selectedOption, options, legend, ...others} = $props();
 </script>
 
@@ -19,10 +20,15 @@
 
 <style>
   fieldset {
-    border: none;
+    background: rgba(255, 0, 0, 0.14);
+    backdrop-filter: blur(10.1px);
+    border: 2px solid rgba(255, 0, 0, 1);
+    border-radius: 16px;
     display: flex;
     flex-direction: column;
     gap: 1.1em;
+    padding: .5em;
+    -webkit-backdrop-filter: blur(4px);
   }
 
   legend {
@@ -32,19 +38,16 @@
 
   @media (scripting: enabled) {
     fieldset {
-    opacity: 0;
-    visibility: hidden;
     position: absolute;
-    transition: opacity 1s ease, visibility 0.5s ease;
+    transition: all 1s ease, visibility 0.5s ease;
   }
 
   .show {
-    opacity: 1;
-    visibility: visible;
+    transform: translateY(0);
   }
 
   .hide {
-    opacity: 0;
+    transform: translateY(300%);
     visibility: hidden;
   }
 }
