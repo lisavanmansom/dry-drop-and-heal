@@ -17,7 +17,7 @@
 
   label {
     border: .1em solid var(--b-z);
-    border-radius: 1em;
+    border-radius: 15px;
     cursor: pointer;
     font-size: 1.25em;
     overflow: hidden;
