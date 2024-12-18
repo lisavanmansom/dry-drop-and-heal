@@ -82,6 +82,8 @@
   .title-row h1 {
     font-family: Calvino;
     margin: 0;
+    font-size: 2em;
+    max-width: none;
   }
 
   progress {

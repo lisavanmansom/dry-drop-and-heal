@@ -18,7 +18,7 @@
     </div>
     <div class="exercise-text">
       <p>{description}</p>
-      <h2>{title}</h2>
+      <h3>{title}</h3>
       <div class="exercise-subinfo">
         <a class="communitydrop" href="#">
           <div class="community-images">
@@ -40,6 +40,11 @@
 
 <style>
   .card {
+    background-color: rgb(17, 17, 17);
+    border-radius: 10px;
+    padding: 1em;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     position: relative;
     padding-bottom: 4em;
     min-width: 100%;
@@ -125,5 +130,12 @@
   .community-image {
     margin-right: -0.2em;
     border-radius: 50%;
+  }
+
+  h3 {
+    color: white;
+    margin-top: 0.2em;    
+    margin-bottom: 0.2em;
+
   }
 </style>

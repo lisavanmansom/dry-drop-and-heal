@@ -30,13 +30,13 @@
     <div class="intro-buttons">
       <div class="nav-buttons">
         <button>
-          <a href="./form-intro" class="nav-link">Eigen pad</a>
+          <a href="./multiple-task-1" class="nav-link">Eigen pad</a>
         </button>
         <button>
-          <a href="./chatbot" class="nav-link">Gepersonaliseerd</a>
+          <a href="./form-intro" class="nav-link">Gepersonaliseerd</a>
         </button>
       </div>
-    </div>
+
   </main>
 
 <style>
