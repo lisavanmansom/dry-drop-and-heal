@@ -24,6 +24,12 @@
   }
 
   @font-face {
+    font-family: Calvino;
+    src: url(../font/calvino-trial/Calvino-Grande-Bold-trial.ttf);
+    font-weight: 900;
+  }
+
+  @font-face {
     font-family: Figtree;
     src: url(../font/figtree/Figtree-Regular.ttf);
     font-weight: 200;
