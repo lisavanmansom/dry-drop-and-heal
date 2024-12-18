@@ -1,3 +1,4 @@
+
 :root {
     --w: #FFFF;
     --b: #111;
@@ -45,8 +46,9 @@
     font-family: Heroic;
     src: url(../font/heroic/heroic-brutal.otf);
     font-weight: 100;
-}
-@font-face {
+  }
+  
+  @font-face {
     font-family: Calvino-Grande;
     src: url(../font/calvino-trial/Calvino-Grande-Bold-trial.ttf);
     font-weight: 800;
@@ -78,13 +80,13 @@
   color: white;
   background-color: black;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
   position: relative;
   padding: 2rem;
 }
 
-.content {
+.intro-content {
   height: 100%;
   width: 100%;
   display: flex;
@@ -95,14 +97,7 @@
   position: relative;
 }
 
-.content-grid {
-  display: grid;
-  grid-template-rows: auto 11rem;
-  overflow: hidden;
-  position: relative;
-}
-
-.buttons {
+.intro-buttons {
   justify-self: center; 
   z-index: 100;
 }
@@ -112,4 +107,10 @@
 ::view-transition-old(root),
 ::view-transition-new(root) {
   animation-duration: 1s;
+}
+
+@media (min-width: 65rem){
+  .intro-content{
+    padding: 2rem 10rem;
+  }
 }

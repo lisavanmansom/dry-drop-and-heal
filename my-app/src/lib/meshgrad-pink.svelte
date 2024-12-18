@@ -2,7 +2,7 @@
 
 <style>
     img {
-        animation: aPink 35s linear infinite;
+        animation: aPink 4s ease-in-out infinite;
         height: 16em;
         order: -1;
         object-fit: contain;
@@ -12,8 +12,12 @@
     }
 
     @keyframes aPink {
-    0% { transform: rotate(0); }
-    100% { transform: rotate(360deg); }
+        0%, 100% {
+            transform: scale(1); 
+        }
+        50% {
+            transform: scale(1.1); 
+        }
     }
 
     @media (min-width:575px) {
