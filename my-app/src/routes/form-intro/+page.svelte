@@ -20,7 +20,7 @@
     <BlurgradRed pageStyle="form-page" />
   </div>
 
-  <div aria-hidden="true">
+  <div class="g-2" aria-hidden="true">
     <BlurgradRed pageStyle="form-page"/>
   </div>
 </main>
@@ -87,7 +87,7 @@
   progress[value]::-webkit-progress-value { background-color: var(--w); }
 
 
-  div:nth-of-type(2) {
+  .g-2 {
     opacity: .5;
     position: absolute;
     top: 33em;
