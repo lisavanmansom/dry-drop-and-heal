@@ -7,10 +7,8 @@
 <main class="intro-main">
     <HeaderIntro headerText_l1="Introductie" headerText_l2="algemeen" progressValue={10} />
     <article class="intro-content">
-        <section class="intro-content-grid">
-            <h2>Privacy</h2>
-            <p>Jouw privacy en comfort zijn onze prioriteit. Alles wat je deelt blijft vertrouwelijk.</p>
-        </section>
+        <h2>Privacy</h2>
+        <p>Jouw privacy en comfort zijn onze prioriteit. Alles wat je deelt blijft vertrouwelijk.</p>
     </article>
     <section class="intro-buttons">
         <NavButtons leftLink="./uitleg-metafoor" rightLink="./tools" borderColor="var(--rt-2)"/>

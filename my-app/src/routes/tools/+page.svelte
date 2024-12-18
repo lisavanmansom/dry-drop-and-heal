@@ -8,14 +8,12 @@
     
     <HeaderIntro headerText_l1="Introductie" headerText_l2="algemeen" progressValue={20} />
     <article class="intro-content">
-        <section class="intro-content-grid">
-            <h2>Tools</h2>
-            <p>
-                We hebben tools samengesteld om je te ondersteunen in je reis door rouw. 
-                Straks geven we een rondleiding binnen de omgeving. <br>
-                Laten we nu eerst samen het landschap van rouw verkennen.
-            </p>
-        </section>
+        <h2>Tools</h2>
+        <p>
+            We hebben tools samengesteld om je te ondersteunen in je reis door rouw. 
+            Straks geven we een rondleiding binnen de omgeving. <br>
+            Laten we nu eerst samen het landschap van rouw verkennen.
+        </p>
     </article>
     
     <section class="intro-buttons">
@@ -24,17 +22,3 @@
     <BlurgradGreen />
 
 </main>
-
-<style>
-
-    @container (min-width: 600px) {
-        .intro-content {
-            padding-top: 8rem;
-        }
-        .intro-content h2 {
-            font-size: 3em;
-        }
-    }
-
-
-</style>

@@ -7,14 +7,12 @@
 <main class="intro-main">
     <HeaderIntro headerText_l1="Introductie" headerText_l2="algemeen" progressValue={30} />
     <article class="intro-content">
-        <section class="introcontent-grid">
-            <h2>Rouwtaken</h2>
-            <p>
-                Onze methode is gebaseerd op de erkende rouwtaken van William Worden, Amerikaans rouwexpert, 
-                zorgvuldig samengesteld om jou te ondersteunen tijdens je rouwreis. <br><br>
-                Ontdek met ons de betekenis en steun die het jou kan bieden.
-            </p>
-        </section>
+        <h2>Rouwtaken</h2>
+        <p>
+            Onze methode is gebaseerd op de erkende rouwtaken van William Worden, Amerikaans rouwexpert, 
+            zorgvuldig samengesteld om jou te ondersteunen tijdens je rouwreis. <br><br>
+            Ontdek met ons de betekenis en steun die het jou kan bieden.
+        </p>
     </article>
 
     <BlurgradPink />
