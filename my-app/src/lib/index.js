@@ -16,3 +16,6 @@ export { default as QuestionForm } from './organism/question-form.svelte'
 export { default as QuestionOption } from './atoms/question-option.svelte'
 export { default as QuestionSet } from './molecules/question-set.svelte'
 export { default as ChristmasGradient } from './atoms/christmastree-gradient.svelte'
+
+// view transitions components
+export { default as SkeletonVT } from './atoms/glam-skeleton.svelte'

@@ -125,6 +125,8 @@
     }
 
   </script>
+
+<canvas bind:this={canvas}></canvas>
   
   <style>
     canvas {
@@ -134,5 +136,4 @@
     }
   </style>
   
-  <canvas bind:this={canvas}></canvas>
   

@@ -18,6 +18,12 @@
   }
 
   @font-face {
+    font-family: LastChristmas;
+    src: url(../font/christmas/lastchristmas-personal-use-only.otf);
+    font-weight: 500;
+  }
+
+  @font-face {
     font-family: Calvino;
     src: url(../font/calvino-trial/Calvino-Grande-Regular-trial.ttf);
     font-weight: 500;
