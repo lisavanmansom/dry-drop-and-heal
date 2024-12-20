@@ -1,4 +1,8 @@
-<img src="/gradients/Meshgrad-pink.png" alt="" width="100" height="100" />
+<script>
+let {name, style = '', pageStyle = {}, ...others} = $props();
+</script>
+
+<img src="/gradients/Meshgrad-pink.png" class={pageStyle} alt="" width="100" height="100" />
 
 <style>
     img {
