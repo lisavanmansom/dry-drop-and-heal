@@ -32,7 +32,7 @@ Ik heb de `section` een volledige viewport height gegeven voor zodat het eenvoud
 
 Bij `.pin-wrap-sticky` is de property `position: sticky;` meegegeven zodat het in beeld blijft tijdens het scrollen. De `.pin-wrap` wordt uiteindelijk geanimeerd op de `viewtimeline`. Verder staan er properties voor de positie bij `.pin-wrap` class, hierdoor kan alles zichtbaar worden tijdens de horizontal scroll.
 
-# Visuals
+## Visuals
 
 <img width="100%" alt="Scherm­afbeelding 2024-12-22 om 13 24 55" src="https://github.com/user-attachments/assets/778ac655-5152-4e0b-8f24-0870d6d34be3" />
 
@@ -55,7 +55,22 @@ Ik heb [christmastree-gradient file](https://github.com/lisavanmansom/dry-drop-a
 
 De view transition is zichtbaar  bij elke pagina als je gaat navigeren naar een andere pagina. De view transition crossfade naar een statisch beeld wat zichtbaar is voor 3 secondes daarna crossfade het terug naar de pagina waar de gebruiker naar navigeert.
 
-# Visuals
+## Visuals
 
 <img width="100%" alt="Scherm­afbeelding 2024-12-22 om 13 18 28" src="https://github.com/user-attachments/assets/fd63a32b-f2ad-4ff2-b54f-1f8327d5823a" />
+
+## Installatie
+- Installeer NodeJs;
+- Fork/clone deze repository;
+- Open het in een code editor;
+- Ga naar de directory 'my-app' door in de terminal cd my-app te typen;
+- Run de command npm install;
+- Run de command npm run dev;
+- Klik op de localhost link en begin met coden.
+
+## Bronnen
+- https://scroll-driven-animations.style
+- https://css-tricks.com/unleash-the-power-of-scroll-driven-animations/
+- https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API
+- https://developer.chrome.com/docs/web-platform/view-transitions?hl=nl
 
