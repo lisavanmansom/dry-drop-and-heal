@@ -15,3 +15,9 @@ export { default as ArrowR } from './arrow-r.svelte'
 export { default as QuestionForm } from './organism/question-form.svelte'
 export { default as QuestionOption } from './atoms/question-option.svelte'
 export { default as QuestionSet } from './molecules/question-set.svelte'
+
+// homepage components
+export { default as ImagesHome } from './atoms/images.svelte'
+export { default as TextHome } from './atoms/text.svelte'
+export { default as HomeBanner } from './organism/home-banner.svelte'
+export { default as AboutBanner } from './organism/about-banner.svelte'
