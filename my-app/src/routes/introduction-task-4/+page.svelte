@@ -1,10 +1,11 @@
 <script>
-    import MeshgradPink from '$lib/meshgrad-pink.svelte'
-    import NavButtons from '$lib/NavButtons.svelte'
-    import HeaderIntro from '$lib/HeaderIntro.svelte'
-    import BlurgradPink from '../../lib/blurgrad-pink.svelte';
-    export let task;
-    console.log('Task:', task);
+    import MeshgradPink from '$lib/meshgrad-pink.svelte';
+    import NavButtons from '$lib/NavButtons.svelte';
+    import HeaderIntro from '$lib/HeaderIntro.svelte';
+    import BlurgradPink from '$lib/blurgrad-pink.svelte';
+    
+    //export let task;
+    //console.log('Task:', task);
 
     function stripHtml(html) {
         return html.replace(/<\/?[^>]+(>|$)/g, "");

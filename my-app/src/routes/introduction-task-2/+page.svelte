@@ -1,8 +1,8 @@
 <script>
-    import MeshgradRed from '$lib/meshgrad-red.svelte'
-    import NavButtons from '$lib/NavButtons.svelte'
-    import HeaderIntro from '$lib/HeaderIntro.svelte'
-    import BlurgradRed from '../../lib/blurgrad-red.svelte';
+    import MeshgradRed from '$lib/meshgrad-red.svelte';
+    import NavButtons from '$lib/NavButtons.svelte';
+    import HeaderIntro from '$lib/HeaderIntro.svelte';
+    import BlurgradRed from '$lib/blurgrad-red.svelte';
 
     // export let task;
     // console.log('Task:', task);

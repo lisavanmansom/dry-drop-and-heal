@@ -1,82 +1,115 @@
 <script>
-    import MeshgradBlue from '$lib/meshgrad-blue.svelte'
-    import NavButtons from '$lib/NavButtons.svelte'
-    import HeaderIntro from '$lib/HeaderIntro.svelte'
-    import BlurgradBlue from '../../lib/blurgrad-blue.svelte';
+    import NavButtons from '$lib/NavButtons.svelte';
+    import HeaderIntro from '$lib/HeaderIntro.svelte';
+    import BlurgradBlue from '$lib/blurgrad-blue.svelte';
+    import MeshgradBlue from '$lib/meshgrad-blue.svelte';
+    import MeshgradRed from '$lib/meshgrad-red.svelte';
+    import MeshgradGreen from '$lib/meshgrad-green.svelte';
+    import MeshgradPink from '$lib/meshgrad-pink.svelte';
 
-    // export let task;
-    // console.log('Task:', task);
+    let rt = "Rouwtaak";
+    let sub1 = "Het verlies aanvaarden";
+    let d1 = "Ontdek hoe je de realiteit van het verlies kunt omarmen.";
 
-    function stripHtml(html) {
-    return html.replace(/<\/?[^>]+(>|$)/g, "");
-    // Verwijderd HTML tags die meegegeven zijn vanuit directus
+    let columns = [false, false, false, false];
+
+    function handleHover(index) {
+        columns = columns.map((_, i) => i === index);
     }
-    let rt = "Rouwtaak"
-    let sub1 = "Het verlies aanvaarden"
-    let d1 = "Ontdek hoe je de realiteit van het verlies kunt omarmen."
+
+    function handleMouseOut() {
+        columns = [false, false, false, false];
+    }
 </script>
 
 <main class="intro-main">
-    <a href="./introduction-h-1">skip</a>
     <HeaderIntro headerText_l1="Introductie" headerText_l2="rouwtaken" progressValue={40} />
+    <section class="intro-content">
+        <article class="column {columns[0] ? 'active' : 'inactive'}" on:mouseenter={() => handleHover(0)} on:mouseleave={handleMouseOut}>
+            <h2>{rt}<em>1</em></h2>
+            <h4>{sub1}</h4>
+            <p>{d1}</p>
+            <MeshgradBlue />
+        </article>
 
-    <article class="intro-content"> 
-        <h2>{rt}<em>1</em></h2>
-        <h4>{sub1}</h4>
-        <p>{d1}</p> 
-        <MeshgradBlue />
-    </article>
+        <article class="column {columns[1] ? 'active' : 'inactive'}" on:mouseenter={() => handleHover(1)} on:mouseleave={handleMouseOut}>
+            <h2>{rt}<em>2</em></h2>
+            <h4>De pijn doorvoelen</h4>
+            <p>Sta jezelf toe om de pijn te voelen en leer om deze op jouw manier te verwerken.</p>
+            <MeshgradRed />
+        </article>
 
-    <BlurgradBlue customStyles="bottom: -120px; right: -100px" />
-    
+        <article class="column {columns[2] ? 'active' : 'inactive'}" on:mouseenter={() => handleHover(2)} on:mouseleave={handleMouseOut}>
+            <h2>{rt}<em>3</em></h2>
+            <h4>Verder in verandering</h4>
+            <p>Vind jouw weg in een wereld die nu anders is door het verlies van je dierbare.</p>
+            <MeshgradGreen />
+        </article>
+
+        <article class="column {columns[3] ? 'active' : 'inactive'}" on:mouseenter={() => handleHover(3)} on:mouseleave={handleMouseOut}>
+            <h2>{rt}<em>4</em></h2>
+            <h4>Emotioneel verder gaan</h4>
+            <p>Ontdek hoe je een nieuw pad kunt inslaan terwijl je het verlies een betekenisvolle plek geeft in je leven.</p>
+            <MeshgradPink />
+        </article>
+    </section>
+
     <section class="intro-buttons">
-        <NavButtons leftLink="./intro-algemeen" rightLink="./introduction-task-2" borderColor="#4DB3FF"/>
+        <NavButtons leftLink="./intro-algemeen" rightLink="./introduction-task-2" borderColor="var(--w)"/>
     </section>
 </main>
 
 <style>
-
-    p {
-        color: var(--g);
-    }
-
     .intro-main {
         display: grid;
         grid-template-rows: auto 1fr auto;
         min-block-size: 100dvh;
-        gap: 2rem; 
+        gap: 2rem;
         align-items: center;
         color: white;
         background-color: black;
         width: 100%;
         height: 100vh;
         overflow: hidden;
-        position: relative;
         padding: 2rem;
-    }
-
-    .intro-main a {
-        position: absolute;
-        top: 1rem;
-        left: 1.4rem;
-        border: 1px solid var(--rt-1);
-        border-radius: .9em;
-        color: var(--w);
-        font-size: 1em;
-        padding: .3em .8em;
-        text-decoration: none;
-        width: max-content;
+        position: relative;
     }
 
     .intro-content {
-        height: 100%;
-        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 3rem;
+        padding: 1rem 2rem 0 2rem;
+        justify-items: center;
+    }
+
+    .column {
+        max-width: 24rem;
+        transition: all 0.3s ease;
+        opacity: 0.6;
+        filter: brightness(0.7);
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
-        padding: 0rem 10rem;
-        z-index: 100;
-        position: relative;
+        height: 100%;
+        justify-content: center;
+        transition: all 0.6s ease;   
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .column.active {
+        opacity: 1;
+        filter: none; 
+        transform: scale(1.1); 
+    }
+
+    .column h2, .column h4, .column p {
+        display: none;
+    }
+
+    .column.active h2, .column.active h4, .column.active p {
+        display: block;
     }
 
 </style>

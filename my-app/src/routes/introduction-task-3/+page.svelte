@@ -1,11 +1,11 @@
 <script>
-    import MeshgradGreen from '$lib/meshgrad-green.svelte'
-    import NavButtons from '$lib/NavButtons.svelte'
-    import HeaderIntro from '$lib/HeaderIntro.svelte'
-    import BlurgradGreen from '../../lib/blurgrad-green.svelte';
+    import MeshgradGreen from '$lib/meshgrad-green.svelte';
+    import NavButtons from '$lib/NavButtons.svelte';
+    import HeaderIntro from '$lib/HeaderIntro.svelte';
+    import BlurgradGreen from '$lib/blurgrad-green.svelte';
 
-    export let task;
-    console.log('Task:', task);
+    //export let task;
+    //console.log('Task:', task);
 
     function stripHtml(html) {
         return html.replace(/<\/?[^>]+(>|$)/g, "");

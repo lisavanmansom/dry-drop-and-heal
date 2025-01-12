@@ -2,29 +2,28 @@
     import NavButtons from '$lib/NavButtons.svelte';
     import HeaderIntro from '$lib/HeaderIntro.svelte';
     import BlurgradGreen from '$lib/blurgrad-green.svelte';
-    import BlurgradRed from '$lib/blurgrad-red.svelte';
 </script>
 
 <main class="intro-main">
     <HeaderIntro headerText_l1="Introductie" headerText_l2="algemeen" progressValue={20} />
 
     <section class="intro-content">
-        <div class="section">
+        <article class="intro-part">
             <h2>Privacy</h2>
             <p>Jouw privacy en comfort zijn onze prioriteit. Alles wat je deelt blijft vertrouwelijk.</p>
-        </div>
-        <div class="section">
+        </article>
+        <article class="intro-part">
             <h2>Tools</h2>
             <p> We hebben tools samengesteld om je te ondersteunen in je reis door rouw. 
                 Straks geven we een rondleiding binnen de omgeving. <br><br>
                 Laten we nu eerst samen het landschap van rouw verkennen.</p>
-        </div>
-        <div class="section">
+        </article>
+        <article class="intro-part">
             <h2>Rouwtaken</h2>
             <p> Onze methode is gebaseerd op de erkende rouwtaken van William Worden, Amerikaans rouwexpert, 
                 zorgvuldig samengesteld om jou te ondersteunen tijdens je rouwreis. <br><br>
                 Ontdek met ons de betekenis en steun die het jou kan bieden.</p>
-        </div>
+        </article>
     </section>
 
     <BlurgradGreen pageStyle=intro_algemeen/>
@@ -35,7 +34,7 @@
 </main>
 
 <style>
-    
+
     .intro-main {
         display: grid;
         grid-template-rows: auto 1fr auto;
@@ -59,7 +58,7 @@
         justify-items: center;
     }
 
-    .section {
+    .intro-part {
         padding: 2rem;
         max-width: 35rem;
         display: flex;
@@ -74,7 +73,7 @@
             padding: 5rem 2rem 0rem 2rem;
         }
 
-        .section {
+        .intro-part {
             padding: 1rem;
             max-width: 24rem;
         }
@@ -85,7 +84,7 @@
             gap: 3rem;
         }
 
-        .section {
+        .intro-part {
             padding: 1rem;
         }
     }
