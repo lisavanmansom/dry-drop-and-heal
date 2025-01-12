@@ -11,7 +11,7 @@
     let sub1 = "Het verlies aanvaarden";
     let d1 = "Ontdek hoe je de realiteit van het verlies kunt omarmen.";
 
-    let columns = [false, false, false, false];
+    let columns = [true, false, false, false];
 
     function handleHover(index) {
         columns = columns.map((_, i) => i === index);
@@ -55,11 +55,12 @@
     </section>
 
     <section class="intro-buttons">
-        <NavButtons leftLink="./intro-algemeen" rightLink="./introduction-task-2" borderColor="var(--w)"/>
+        <NavButtons leftLink="./intro-algemeen" rightLink="./introduction-h-1" borderColor="var(--w)"/>
     </section>
 </main>
 
 <style>
+
     .intro-main {
         display: grid;
         grid-template-rows: auto 1fr auto;
