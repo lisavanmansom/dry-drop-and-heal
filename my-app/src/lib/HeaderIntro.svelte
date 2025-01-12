@@ -58,10 +58,12 @@
     }
 
     @media (min-width: 65rem){
+        .header {
+            padding: 0 2rem 0 2rem;
+        }
+
         .header h3 {
             font-size: 50px;
         }
-        
-
     } 
 </style>

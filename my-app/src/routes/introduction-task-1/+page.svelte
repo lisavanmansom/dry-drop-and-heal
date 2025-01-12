@@ -30,7 +30,7 @@
     <BlurgradBlue customStyles="bottom: -120px; right: -100px" />
     
     <section class="intro-buttons">
-        <NavButtons leftLink="./rouwtaken" rightLink="./introduction-task-2" borderColor="#4DB3FF"/>
+        <NavButtons leftLink="./intro-algemeen" rightLink="./introduction-task-2" borderColor="#4DB3FF"/>
     </section>
 </main>
 
