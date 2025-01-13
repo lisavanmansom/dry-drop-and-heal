@@ -80,18 +80,18 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr); 
         gap: 3rem;
-        padding: 1rem 2rem 0 2rem;
+        padding: 1rem 3rem 0 3rem;
         justify-items: center;
     }
 
     .column {
-        max-width: 15rem;
+        max-width: 13rem;
+        max-height: 30rem;
         transition: all 0.3s ease;
         opacity: 0.6;
         filter: brightness(0.7);
         display: flex;
         flex-direction: column;
-        max-height: 30rem;
         justify-content: center;
         transition: all 0.6s ease;   
         display: flex;
@@ -111,6 +111,7 @@
     .column p {
         color: var(--g);
         font-size: 10px;
+        line-height: 1.2rem;
     }
 
     .column em {

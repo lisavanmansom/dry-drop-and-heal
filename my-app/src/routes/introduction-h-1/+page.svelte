@@ -1,6 +1,5 @@
 <script>
     import BlurgradPink from '$lib/blurgrad-Pink.svelte';
-    import NavButtons from '$lib/NavButtons.svelte';
     import HeaderIntro from '$lib/HeaderIntro.svelte'
     //export let task;
     //console.log('Task:', task);
@@ -142,6 +141,6 @@
       height: 100%;
       color: white;
   }
-  
+
 </style>
   
