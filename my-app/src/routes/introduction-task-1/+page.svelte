@@ -85,24 +85,42 @@
     }
 
     .column {
-        max-width: 24rem;
+        max-width: 15rem;
         transition: all 0.3s ease;
         opacity: 0.6;
         filter: brightness(0.7);
         display: flex;
         flex-direction: column;
-        height: 100%;
+        max-height: 30rem;
         justify-content: center;
         transition: all 0.6s ease;   
-        height: 100%;
         display: flex;
         flex-direction: column;
+    }
+
+    .column h2 {
+        font-size: 26px;
+        margin-bottom: 0.2rem;
+    }
+
+    .column h4 {
+        font-size: 13px;
+        margin-bottom: 0.2rem;
+    }
+
+    .column p {
+        color: var(--g);
+        font-size: 10px;
+    }
+
+    .column em {
+        font-size: 20px;
     }
 
     .column.active {
         opacity: 1;
         filter: none; 
-        transform: scale(1.1); 
+        transform: scale(1.6); 
     }
 
     .column h2, .column h4, .column p {
