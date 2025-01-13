@@ -67,7 +67,7 @@
     <button class="curButton" type="button" on:click={nextStep} disabled={currentStep === questions.length - 1}>
       Volgende</button>
     {#if currentStep === questions.length - 1}
-      <button type="submit">Submit</button>
+      <button type="submit">Bekijk uw resultaat</button>
     {/if}
   </div>
 
