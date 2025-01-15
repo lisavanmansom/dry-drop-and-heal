@@ -45,7 +45,7 @@
     </section>
 
     <section class="intro-buttons">
-        <NavButtons leftLink="./intro-algemeen" rightLink="./introduction-h-1" borderColor="var(--w)"/>
+        <NavButtons leftLink="./introductie-algemeen" rightLink="./introductie-hulp" borderColor="var(--w)"/>
     </section>
 </main>
 

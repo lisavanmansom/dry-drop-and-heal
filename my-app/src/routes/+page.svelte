@@ -7,7 +7,7 @@ let button;
 
 function updateButtonLink() {
     if (window.matchMedia("(min-width: 65rem)").matches) {
-        button.href = "./intro-algemeen";
+        button.href = "./introductie-algemeen";
     } else {
         button.href = "./uitleg-metafoor";
     }

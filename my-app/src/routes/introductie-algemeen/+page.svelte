@@ -29,7 +29,7 @@
     <BlurgradGreen pageStyle=intro_algemeen/>
 
     <section class="intro-buttons">
-        <NavButtons leftLink="./uitleg-metafoor" rightLink="./introduction-task-1" borderColor="var(--rt-3)"/>
+        <NavButtons leftLink="./uitleg-metafoor" rightLink="./introductie-rouwtaken" borderColor="var(--rt-3)"/>
     </section>
 </main>
 

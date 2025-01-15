@@ -23,7 +23,7 @@
         <BlurgradBlue customStyles="top: -120px; right: -100px;" />
     
         <section class="intro-buttons">
-            <NavButtons leftLink="./" rightLink="./intro-algemeen" borderColor="var(--rt-1)"/>
+            <NavButtons leftLink="./" rightLink="./introductie-algemeen" borderColor="var(--rt-1)"/>
         </section>
     </section>
 
