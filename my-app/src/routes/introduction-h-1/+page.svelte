@@ -1,14 +1,12 @@
 <script>
     import BlurgradPink from '$lib/blurgrad-Pink.svelte';
     import HeaderIntro from '$lib/HeaderIntro.svelte'
-    //export let task;
-    //console.log('Task:', task);
   
   </script>
 
 
 <main class="intro-main">
-  <HeaderIntro headerText_l1="Hulp op maat, of" headerText_l2="liever zelf kiezen?" progressValue={80} />
+  <HeaderIntro headerText_l1="Hulp op maat, of" headerText_l2="liever zelf kiezen?" progressValue={90} />
 
   <section class="intro-content">
     <article class="intro-part">
@@ -71,33 +69,12 @@
   .intro-part {
     padding: 2rem;
     max-width: 35rem;
+    min-width: 14rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
   }
 
-  @media (min-width: 50rem) {
-    .intro-content {
-        grid-template-columns: repeat(3, 1fr); 
-        gap: 2rem;
-        padding: 5rem 2rem 0rem 2rem;
-    }
-
-    .intro-part {
-        padding: 1rem;
-        max-width: 24rem;
-    }
-  }
-
-  @media (min-width: 65rem) {
-    .intro-content {
-        gap: 3rem;
-    }
-
-    .intro-part {
-        padding: 1rem;
-    }
-  }
     
   .nav-buttons {
       display: flex;
@@ -140,6 +117,29 @@
       width: 100%;
       height: 100%;
       color: white;
+  }
+
+  @media (min-width: 50rem) {
+    .intro-content {
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 2rem;
+        padding: 5rem 2rem 0rem 2rem;
+    }
+
+    .intro-part {
+        padding: 1rem;
+        max-width: 24rem;
+    }
+  }
+
+  @media (min-width: 65rem) {
+    .intro-content {
+        gap: 3rem;
+    }
+
+    .intro-part {
+        padding: 1rem;
+    }
   }
 
 </style>

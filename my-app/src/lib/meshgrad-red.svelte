@@ -20,10 +20,6 @@
         }
     }
 
-    @media (min-width:575px) {
-        img { height: 13em; }
-    }
-
     @media (min-width:875px) {
         img { height: 13em; }
     }

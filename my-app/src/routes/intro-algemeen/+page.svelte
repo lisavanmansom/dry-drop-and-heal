@@ -5,7 +5,7 @@
 </script>
 
 <main class="intro-main">
-    <HeaderIntro headerText_l1="Introductie" headerText_l2="algemeen" progressValue={20} />
+    <HeaderIntro headerText_l1="Introductie" headerText_l2="algemeen" progressValue={30} />
 
     <section class="intro-content">
         <article class="intro-part">

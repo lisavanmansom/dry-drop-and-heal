@@ -3,7 +3,7 @@
 <style>
     img {
         animation: aBlue 4s ease-in-out infinite;
-        height: 5em;
+        height: 16em;
         order: -1;
         object-fit: contain;
         width: 100%;
@@ -18,10 +18,6 @@
         50% {
             transform: scale(1.1); 
         }
-    }
-
-    @media (min-width:575px) {
-        img { height: 13em; }
     }
 
     @media (min-width:875px) {
