@@ -125,6 +125,7 @@
         .column h2 {
             font-size: 27px;
             margin-bottom: 0.2rem;
+            margin-top: 0;
         }
 
         .column h4 {
