@@ -1,7 +1,6 @@
 <script>
-    import BlurgradPink from '$lib/blurgrad-Pink.svelte';
+    import BlurgradPink from '$lib/blurgrad-pink.svelte';
     import HeaderIntro from '$lib/HeaderIntro.svelte'
-  
   </script>
 
 
