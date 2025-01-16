@@ -2,7 +2,6 @@
   import { MeshgradBlue, MeshgradRed, MeshgradPink, MeshgradGreen, NavIcons, BlurgradPink, BlurgradBlue, BlurgradGreen, BlurgradRed } from '$lib';
   import { page } from '$app/stores';
 
-  // Content
   const content = {
     rouwtaak1: { title: "Het verlies aanvaarden", description: "Ontdek hoe je de realiteit van het verlies kunt omarmen", resultPage: "/form-redirect/rouwtaak1", taskPage: "/multiple-task-1", components: [ MeshgradBlue, BlurgradBlue ] ,className: "blue-theme" },
     rouwtaak2: { title: "De pijn doorvoelen", description: "Sta jezelf toe om de pijn te voelen en leer om deze op jouw manier te verwerken", resultPage: "/form-redirect/rouwtaak2", taskPage: "/multiple-task-2", components: [ MeshgradRed, BlurgradRed ] ,className: "red-theme" },
@@ -74,7 +73,6 @@
       <svelte:component this={currentContent.components[1]} />
     {/if}
   </div>
-
 </main>
 
 <style>

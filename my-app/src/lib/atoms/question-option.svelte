@@ -2,12 +2,10 @@
   let {name, value, labelText, bindGroup, ...others} = $props();
 </script>
 
-<!-- input component-->
 <label>
   <input type="radio" name={name} value={value} bind:group={bindGroup} />
   {labelText}
 </label>
-
 
 <style>
   input[type='radio'] {

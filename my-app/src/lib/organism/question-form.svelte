@@ -2,7 +2,6 @@
   import QuestionSet from '../molecules/question-set.svelte';
   let currentStep = 0;
 
-  // content form
   let questions = [{
     legend: "Hoe denk je over het verlies?",
     name: "question1",
@@ -46,7 +45,6 @@
   }
 </script>
 
-<!-- form component-->
 <form  method="POST" action="?/submit">
   <div>
   {#each questions as question, index}
