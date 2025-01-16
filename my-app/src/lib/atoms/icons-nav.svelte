@@ -35,7 +35,8 @@
 
 <style>
     svg {
-        height: 2em;
+        height: 1.4em;
+        transform: scale(.7);
         width: 2em;
     }
 </style>
