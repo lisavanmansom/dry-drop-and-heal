@@ -14,12 +14,12 @@
   }
 
   label {
-    border: .1em solid var(--b-z);
-    border-radius: 1em;
+    border: 1px solid var(--b-z);
+    border-radius: 30px;
     cursor: pointer;
     font-size: 1.25em;
     overflow: hidden;
-    padding: .5em .45em;
+    padding: .6em 1.4em;
     position: relative;
   }
 

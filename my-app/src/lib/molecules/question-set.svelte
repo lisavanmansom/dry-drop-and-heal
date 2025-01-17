@@ -21,7 +21,7 @@
     border: none;
     display: flex;
     flex-direction: column;
-    gap: 1.1em;
+    gap: 1.3em;
   }
 
   legend {
