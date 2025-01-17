@@ -58,6 +58,12 @@
         color: var(--g);
     }
 
+    .praten-heading {
+        padding: 3rem 3rem 3rem 1rem;
+        width: 100%;
+        background-color: var(--b-5)
+    }
+
     .praten-content {
         display: flex;
         flex-direction: column;
