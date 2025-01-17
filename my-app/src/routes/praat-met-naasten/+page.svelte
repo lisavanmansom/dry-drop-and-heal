@@ -5,20 +5,28 @@
 
 <main class="praten-main">
     <section class="praten-heading">
-        <h2>Praten</h2>
-        <h4>Steun van naasten, Yana of hulpverleners. </h4>
+        <h2>Praat met naasten</h2>
+        <h4>In je rouwproces kunnen vrienden en familie soms onzeker zijn over hoe te helpen. Een klein teken van jou kan hen aanmoedigen om steun te bieden. </h4>
     </section>
-
-    <section class="praten-content">
-        <a href="/praat-met-naasten" class="section-item">
-            <p>Praat met naasten</p>   
-        </a>
-        <a href="/chatbot" class="section-item">
-            <p>Chat met AI-Yana | 24-7 beschikbaar</p>
-        </a>
-        <a href="/hulpverlening" class="section-item">
-            <p>Hulpverlening</p>
-        </a>
+    
+    <section class="praten-content">    
+        <div class="contact-list">
+            <div class="contact-item">
+              <img src="path-to-image" alt="Papa">
+              <p>Papa</p>
+              <a href="tel:+1234567890">Bellen</a>
+            </div>
+            <div class="contact-item">
+              <img src="path-to-image" alt="Oma">
+              <p>Oma</p>
+              <a href="tel:+1234567890">Bellen</a>
+            </div>
+            <div class="contact-item">
+              <img src="path-to-image" alt="Lena">
+              <p>Lena</p>
+              <a href="tel:+1234567890">Bellen</a>
+            </div>
+        </div>
     </section>
 
     <BlurgradPink pageStyle="praten-page"/>
@@ -55,7 +63,13 @@
         width: 100%;
     }
 
-    .section-item {
+    .contact-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .contact-item {
         padding: 1rem;
         width: 100%;
         display: flex;
@@ -66,6 +80,16 @@
         text-decoration: none;
         border-bottom: 1px solid var(--b-p);
         min-width: 20rem;
+    }
+
+    .contact img {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+    }
+
+    .contact p {
+        font-size: 18px;
     }
 
 
