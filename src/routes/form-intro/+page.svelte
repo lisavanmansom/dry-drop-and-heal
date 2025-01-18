@@ -1,6 +1,5 @@
 <script>
-  import {BlurgradPink, QuestionForm} from '$lib'
-  
+  import {BlurGradient, QuestionForm} from '$lib'
 </script>
   
 <main>
@@ -18,11 +17,11 @@
   <QuestionForm />
 
   <div aria-hidden="true">
-    <BlurgradPink pageStyle="form-page" />
+    <BlurGradient pageStyle="pink-theme"/>
   </div>
 
   <div aria-hidden="true">
-    <BlurgradPink pageStyle="form-page"/>
+    <BlurGradient pageStyle="pink-theme"/>
   </div>
 </main>
   
@@ -84,13 +83,14 @@
 
   div:nth-of-type(2) {
     position: absolute;
-    top: 33em;
+    left: -15em;
+    top: 1em;
     transform: matrix(0, 1, 1, 0, 0, 0);
   }
 
   div:nth-of-type(3) {
     position: absolute;
-    right: 0em;
+    right: -5em;
     bottom: 0em;
   }
 </style>

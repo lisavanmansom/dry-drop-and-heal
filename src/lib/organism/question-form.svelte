@@ -1,5 +1,7 @@
 <script>
-  import QuestionSet from '../molecules/question-set.svelte';
+  import { onMount } from 'svelte';
+  import { QuestionSet } from '$lib'
+
   let currentStep = 0;
 
   let questions = [{
@@ -43,9 +45,15 @@
   function prevStep() {
     if (currentStep > 0) currentStep--;
   }
+
+  let hidden = true;
+
+    onMount(() => {
+      hidden = false;
+    });
 </script>
 
-<form  method="POST" action="?/submit">
+<form method="POST" action="?/submit">
   <div>
   {#each questions as question, index}
     <!-- QuestionSet / fieldsets-->
@@ -59,7 +67,7 @@
   {/each}
   </div>
 
-  <div>
+  <div hidden={hidden}>
     <button class="curButton" type="button" on:click={prevStep} disabled={currentStep === 0}>
       Terug</button>
     <button class="curButton" type="button" on:click={nextStep} disabled={currentStep === questions.length - 1}>
@@ -69,7 +77,7 @@
     {/if}
   </div>
 
-  <button class="submitButton" type="submit">Submit</button>
+  <button class="submitButton" type="submit">Bekijk uw resultaat</button>
 </form>
 
 <style>
