@@ -58,19 +58,18 @@
     .praten-heading {
         padding: 3rem 3rem 3rem 1rem;
         width: 100%;
-        background-color: var(--b-5)
+        background-color: var(--b-5);
     }
 
     .praten-content {
         display: flex;
         flex-direction: column;
         justify-content: start;
-        gap: 1rem;
         width: 100%;
     }
 
     .section-item {
-        padding: 1rem;
+        padding: 1.5rem;
         width: 100%;
         display: flex;
         flex-direction: row;
