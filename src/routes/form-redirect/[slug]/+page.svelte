@@ -1,12 +1,12 @@
-<script>
-  import { MeshgradBlue, MeshgradRed, MeshgradPink, MeshgradGreen, NavIcons, BlurgradPink, BlurgradBlue, BlurgradGreen, BlurgradRed } from '$lib';
+<script>  
+  import { MeshGradient, NavIcons, BlurGradient } from '$lib';
   import { page } from '$app/stores';
 
   const content = {
-    rouwtaak1: { title: "Het verlies aanvaarden", description: "Ontdek hoe je de realiteit van het verlies kunt omarmen", resultPage: "/form-redirect/rouwtaak1", taskPage: "/multiple-task-1", components: [ MeshgradBlue, BlurgradBlue ] ,className: "blue-theme" },
-    rouwtaak2: { title: "De pijn doorvoelen", description: "Sta jezelf toe om de pijn te voelen en leer om deze op jouw manier te verwerken", resultPage: "/form-redirect/rouwtaak2", taskPage: "/multiple-task-2", components: [ MeshgradRed, BlurgradRed ] ,className: "red-theme" },
-    rouwtaak3: { title: "Verder in verandering", description: "Vind jouw weg in een wereld die nu anders is door het verlies van je dierbare", resultPage: "/form-redirect/rouwtaak3", taskPage: "/multiple-task-3", components: [ MeshgradGreen, BlurgradGreen ] ,className: "green-theme" },
-    rouwtaak4: { title: "Emotioneel verder gaan", description: "Ontdek hoe je een nieuw pad kunt inslaan terwijl je het verlies een betekenisvolle plek geeft in je leven.", resultPage: "/form-redirect/rouwtaak4", taskPage: "/multiple-task-4", components: [ MeshgradPink, BlurgradPink ], className: "pink-theme" }
+    rouwtaak1: { title: "Het verlies aanvaarden", description: "Ontdek hoe je de realiteit van het verlies kunt omarmen", resultPage: "/form-redirect/rouwtaak1", taskPage: "/multiple-task-1", components: [ MeshGradient, BlurGradient ], className: "blue-theme result-page", pageStyles: BlurGradient.blueTheme },
+    rouwtaak2: { title: "De pijn doorvoelen", description: "Sta jezelf toe om de pijn te voelen en leer om deze op jouw manier te verwerken", resultPage: "/form-redirect/rouwtaak2", taskPage: "/multiple-task-2", components: [ MeshGradient, BlurGradient ], className: "red-theme result-page", pageStyles: BlurGradient.redTheme },
+    rouwtaak3: { title: "Verder in verandering", description: "Vind jouw weg in een wereld die nu anders is door het verlies van je dierbare", resultPage: "/form-redirect/rouwtaak3", taskPage: "/multiple-task-3", components: [ MeshGradient, BlurGradient ], className: "green-theme result-page", pageStyles: BlurGradient.greenTheme },
+    rouwtaak4: { title: "Emotioneel verder gaan", description: "Ontdek hoe je een nieuw pad kunt inslaan terwijl je het verlies een betekenisvolle plek geeft in je leven.", resultPage: "/form-redirect/rouwtaak4", taskPage: "/multiple-task-4", components: [ MeshGradient, BlurGradient ], className: "pink-theme result-page", pageStyles: BlurGradient.pinkTheme }
   };
 
   let slug = '';
@@ -43,13 +43,13 @@
       <h1>Uw resultaat</h1>
       <details>
         <summary>Verander van rouwtaak</summary>
-        <ul>
+        <ol>
           {#each Object.entries(content) as [key, notActiveContent]}
             <li>
               <a href={notActiveContent.resultPage}>{notActiveContent.title}</a>
             </li>
           {/each}
-        </ul>
+        </ol>
       </details>
       <label>
         <progress value="70" max="100">80 %</progress>
@@ -60,8 +60,8 @@
       <h2>{currentContent.title}</h2>
       <p>{currentContent.description}</p>
 
-      {#if currentContent.components[0]}
-        <svelte:component this={currentContent.components[0]} />
+      {#if currentContent.components[0] === MeshGradient}
+        <MeshGradient imgSrc={`/assets/gradients/dynamic/Meshgrad-${slug}.png`} className={currentContent.currentContent} pageStyle= "ResultPage" />
       {/if}
 
       <a href={currentContent.taskPage}>Ga verder</a>
@@ -70,7 +70,7 @@
 
   <div class="background-gradient" aria-hidden="true">
     {#if currentContent.components[1]}
-      <svelte:component this={currentContent.components[1]} />
+      <svelte:component this={currentContent.components[1]} pageStyle={currentContent.className} />
     {/if}
   </div>
 </main>
@@ -83,7 +83,7 @@
 
   h1  { font-family: Calvino; z-index: 10; font-size: clamp(3rem, 15vw, 4rem); font-weight: 600; }
   h2  { font-family: Calvino; font-weight: 600; font-size:clamp(1.6rem, 5vw, 2rem);}
-  p   { font-family: Figtree; color:var(--b-h); font-weight: 100; font-size:clamp(1rem, 5vw, 1.2rem); font-style: italic;}
+  p   { font-family: Figtree; color:var(--w); font-weight: 100; font-size:clamp(1rem, 5vw, 1.2rem);}
   ul  { list-style: none ;}
   a   { text-decoration: none; color: var(--w);}
 
@@ -177,17 +177,24 @@
         letter-spacing: 0.02em;
       }
       > details {
-        > ul { 
+        > ol { 
+          column-gap: 3em;
           display: flex;
-          flex-direction: column;
+          flex-wrap: wrap;
           justify-content: space-around;
-          height: 8em;
-          padding: .4em;
+          height: min-content;
+          padding: 1em;
+          row-gap: 1em;
           > li {
-            border-bottom: 1px solid var(--rt);
-            padding-bottom: .1em;
+            flex-grow: 1;
+            margin-left: .5em;
+            padding-bottom: .2em;
+            width: 10em;
+
             > a {
-              color: var(--b-z);
+              color: var(--w);
+              min-width: 40ch;
+
             }
             @media (hover: hover) { 
               > a:hover {
@@ -197,8 +204,7 @@
           }
         }
         > summary {
-          color: var(--b-z);
-          letter-spacing: 0.25em;
+          color: var(--w);
         }
         @media (hover: hover) { 
           > summary:hover {
@@ -211,7 +217,7 @@
         transition: height 0.5s ease, content-visibility 0.5s ease allow-discrete;
         height: 0;
       }
-      [open]::details-content { height: 7em; }
+      [open]::details-content { height: 10em; }
     
     progress[value] {
       appearance: none;
@@ -231,7 +237,6 @@
   > article {
     display: flex;
     flex-direction: column;
-    gap: 1em;
     > h2 {
       order: -3;
     }
@@ -241,15 +246,18 @@
       padding-bottom: 2em;
     }
     > a { 
-      border: 1px solid var(--rt);
+      border: 1px solid var(--w);
       border-radius: 18px;
       margin-top: 3em;
       padding: .5em 2em;
+      transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       width: max-content;
     }
     @media (hover: hover) { 
       > a:hover {
-          filter: brightness(75%);
+        background-color: var(--b-h);
+        border: 1px solid var(--w);
+        color: var(--b);
         }
       }
   }
@@ -260,7 +268,8 @@
   }
 
   @container main-container (width > 900px) {
-      .heading-group { padding: 2em 4em 0; }
+      .heading-group { padding: 2em 4em 0;
+        [open]::details-content { height: 4em; } }
       article { padding: 1em 4em 0;}
   }
 
