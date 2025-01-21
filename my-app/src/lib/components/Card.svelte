@@ -27,7 +27,13 @@
       subtitle: "Golven van ongeloof",
       details: ["3 min"],
       expanded: false,
-    }
+    },
+    {
+      title: "Meditatie",
+      subtitle: "Golven van ongeloof",
+      details: ["3 min"],
+      expanded: false,
+    },
   ];
 
   function expandCard(index) {
@@ -43,7 +49,7 @@
     >
       <div>
         <p>{card.title}</p>
-        <h2>{card.subtitle}</h2>
+        <h3>{card.subtitle}</h3>
         {#if card.expanded}
           <div class="details">
             <a class="communitydrop" href="#">
@@ -90,11 +96,19 @@
 </section>
 
 <style>
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+  }
+
   .all-cards {
     display: flex;
     scroll-snap-type: x mandatory;
     gap: 4rem;
-    padding: 1em 2em;
+    padding: 30px 40px;
     overflow: auto;
     margin-top: 5em;
   }
@@ -104,8 +118,8 @@
     border-radius: 10%;
     padding: 1rem;
     padding-right: 5em;
-    width: 50em;
-    height: 12em;
+    width: 100%;
+    height: 200px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: all 0.3s ease;
@@ -116,14 +130,13 @@
   }
 
   .card.expanded {
-    height: 20em;
+    height: 300px;
     position: relative;
   }
 
-  .card h2 {
+  .card h3 {
     margin: 0;
     color: white;
-    max-width: none;
     font-size: 1.5rem;
   }
 
@@ -145,7 +158,7 @@
     padding: 0.5rem 1rem;
     border: solid 1px;
     color: white;
-    border-radius: 1em;
+    border-radius: 20px;
     cursor: pointer;
     font-size: 1rem;
   }
@@ -161,14 +174,14 @@
 
   .details-text {
     border: solid rgb(245, 245, 245, 0.2) 1px;
-    border-radius: 1em;
+    border-radius: 20px;
     padding-left: 1em;
     padding-right: 1em;
     display: flex;
     align-items: center;
-    gap: 0.5em;
+    gap: 10px;
     width: 100px;
-    margin-top: 0.3em;
+    margin-top: 5px;
   }
 
   .card.expanded .button {
@@ -179,7 +192,7 @@
     display: flex;
     text-decoration: none;
     border: solid rgb(245, 245, 245, 0.2) 1px;
-    border-radius: 1em;
+    border-radius: 20px;
     padding-left: 1em;
     padding-right: 1em;
     width: 15.5em;

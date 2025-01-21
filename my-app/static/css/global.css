@@ -16,12 +16,6 @@
     --b-z: #C3C3C3;
     --b-h: rgba(255, 255, 255, 0.75);
     --b-f: rgb(236, 113, 222);
-    --background-color: #111;
-    --text-color: #fff;
-    --hover-bg: #333;
-    --border-color: #333;
-    --shadow-color: rgba(0, 0, 0, 0.2);
-    --progress-bg: #555;
   }
 
   @font-face {
