@@ -18,3 +18,15 @@ export { default as QuestionSet } from './molecules/question-set.svelte'
 export { default as NavIcons } from './atoms/icons-nav.svelte'
 export { default as BlurGradient } from './atoms/blur-gradient.svelte'
 export { default as MeshGradient } from './atoms/mesh-gradient.svelte'
+
+
+// nav-svg components
+export { default as IconChat } from './atoms/IconChat.svelte'
+export { default as IconDrop } from './atoms/IconDrop.svelte'
+export { default as IconHamburger } from './atoms/IconHamburger.svelte'
+export { default as IconToday } from './atoms/IconToday.svelte'
+export { default as IconProfile } from './atoms/IconProfile.svelte'
+
+export { default as Card } from './molecules/Card.svelte'
+export { default as Header } from './molecules/Header.svelte'
+export { default as TaskSelector } from './molecules/Task-selector.svelte'
