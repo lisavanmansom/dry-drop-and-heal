@@ -24,12 +24,12 @@
   }
 
   label:has(input[type=radio]) {
-    transition: all 0.5s ease-in;
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   label:has(input[type=radio]:hover) {
     background-color: var(--b-h);
-    border: .1em solid var(--w);
+    border: 1px solid var(--w);
     color: var(--b);
   }
 
