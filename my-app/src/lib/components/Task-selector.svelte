@@ -42,7 +42,7 @@
   <div class="dropdown">
     <!-- Toggle button -->
     <button class="dropdown-toggle" on:click={toggleDropdown}>
-      <img class="task-image" src={currentImage} alt="" width="60px" />
+      <img loading="lazy" class="task-image" src={currentImage} alt="" width="60px" />
       <h1>{current}</h1>
       <svg
         class="arrow {dropdownOpen ? 'open' : ''}"
@@ -74,7 +74,7 @@
     <div class="dropdown-menu {dropdownOpen ? 'open' : ''}">
       {#each items as item}
         <a href={item.href} class="dropdown-item">
-          <img src={item.src} alt="" width="15px" />
+          <img loading="lazy" src={item.src} alt="" width="15px" />
           {item.label}</a
         >
       {/each}
