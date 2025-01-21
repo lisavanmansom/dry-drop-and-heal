@@ -17,13 +17,14 @@
 
     .gradient {
         background-color: var(--rt);
-        height: 20em;
-        width: 20em;
-        transform: scale(2);
         border-radius: 100%;
         filter: blur(100px) brightness(1.7);
+        height: 20em;
         opacity: 0.8;
-
+        pointer-events: none;
+        transform: scale(2);
+        width: 20em;
+   
         /* removes brightness filter when viewed in firefox */
         @-moz-document url-prefix() {
             filter: blur(500px);
@@ -32,5 +33,11 @@
 
     .hidden {
         display: block;
+    }
+
+    .result-page {
+      height: 15em;
+      opacity: 0.5;
+      width: 15em;
     }
 </style>
