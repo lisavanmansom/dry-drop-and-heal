@@ -1,5 +1,5 @@
 <script>
-    import Nav from "../../lib/components/Nav.svelte";
+    import { Nav } from '$lib';
     import BlurgradPink from "$lib/blurgrad-pink.svelte";
     import CallIcon from "$lib/atoms/call-icon.svelte";
     import ArrowBack from "$lib/atoms/arrow-back.svelte";

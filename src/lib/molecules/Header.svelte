@@ -21,7 +21,7 @@
           </a>
         </li>
         <li>
-          <a href="/chatbot">
+          <a href="/praten">
             <IconChat/>
             Praten
           </a>

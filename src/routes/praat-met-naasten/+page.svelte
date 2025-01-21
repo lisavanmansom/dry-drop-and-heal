@@ -1,6 +1,6 @@
 <script>
-    import Nav from "../../lib/components/Nav.svelte";
-    import BlurgradPink from "../../lib/atoms/blurgrad-pink.svelte";
+    import { Nav } from '$lib';
+
     import CallIcon from "$lib/atoms/call-icon.svelte";
     import AppIcon from "$lib/atoms/chatapp-icon.svelte";
     import PlusIcon from "$lib/atoms/plus-icon.svelte";

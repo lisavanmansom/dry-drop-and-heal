@@ -18,7 +18,7 @@ export { default as QuestionSet } from './molecules/question-set.svelte'
 export { default as NavIcons } from './atoms/icons-nav.svelte'
 export { default as BlurGradient } from './atoms/blur-gradient.svelte'
 export { default as MeshGradient } from './atoms/mesh-gradient.svelte'
-
+export { default as Nav } from './molecules/Nav.svelte'
 
 // nav-svg components
 export { default as IconChat } from './atoms/IconChat.svelte'

@@ -1,10 +1,9 @@
 <script>
-    import Nav from "../../lib/components/Nav.svelte";
-    import BlurgradPink from "$lib/blurgrad-pink.svelte";
+    import { Nav, BlurgradPink, ArrowR } from '$lib';
+
     import PeopleIcon from "$lib/atoms/people-icon.svelte";
     import ChatIcon from "$lib/atoms/chat-icon.svelte";
     import CallIcon from "$lib/atoms/call-icon.svelte";
-    import ArrowR from "$lib/atoms/arrow-r-2.svelte"
 </script>
 
 <main class="praten-main-start">

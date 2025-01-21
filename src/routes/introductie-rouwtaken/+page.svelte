@@ -1,7 +1,6 @@
 <script>
     import NavButtons from '$lib/molecules/NavButtons.svelte';
     import HeaderIntro from '$lib/molecules/HeaderIntro.svelte';
-    import BlurgradBlue from '$lib/blurgrad-blue.svelte';
     import MeshgradBlue from '$lib/meshgrad-blue.svelte';
     import MeshgradRed from '$lib/meshgrad-red.svelte';
     import MeshgradGreen from '$lib/meshgrad-green.svelte';

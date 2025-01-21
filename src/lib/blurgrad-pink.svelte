@@ -32,6 +32,12 @@ style="{customStyles}" />
         z-index: 0;
     }
 
+    .blurred-image.praten-page {
+        position: absolute;
+        bottom: 10rem;
+        right: -10rem;
+    }
+
     .blurred-image.form-page {
         transform: scale(2);
         /* animation: bg-gradient 10s linear infinite; */
