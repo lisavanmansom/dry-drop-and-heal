@@ -7,8 +7,8 @@
     import ArrowR from "$lib/atoms/arrow-r-2.svelte"
 </script>
 
-<main class="praten-main">
-    <section class="praten-heading">
+<main class="praten-main-start">
+    <section class="praten-heading-start">
         <h2>Praten</h2>
         <h4>Steun van naasten, Yana of hulpverleners. </h4>
     </section>
@@ -36,51 +36,5 @@
 </main>
 
 <style>
-
-    .praten-main {
-        gap: 2rem;
-        align-items: left;
-        justify-content: left;
-        justify-items: left;
-        color: white;
-        background-color: black;
-        width: 100%;
-        min-height: 100vh;
-        overflow: hidden;
-        position: relative;
-    }
-
-    .praten-main h4{
-        font-size: 16px;
-        color: var(--g);
-    }
-
-    .praten-heading {
-        padding: 3rem 3rem 3rem 1rem;
-        width: 100%;
-        background-color: var(--b-5);
-    }
-
-    .praten-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        width: 100%;
-    }
-
-    .section-item {
-        padding: 1.5rem;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        text-decoration: none;
-        color: var(--w);
-        text-decoration: none;
-        border-bottom: 1px solid var(--b-p);
-        min-width: 20rem;
-    }
-
-
+    @import '/static/css/praten-pages.css'; 
 </style>
