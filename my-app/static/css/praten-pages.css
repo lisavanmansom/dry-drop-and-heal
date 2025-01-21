@@ -259,9 +259,6 @@ input[type="file"] {
     padding: 1.5rem 1rem 1rem 1.5rem;
 }
 
-.praten-content p {
-    color: var(--g);
-}
 
 a {
     color: var(--w);

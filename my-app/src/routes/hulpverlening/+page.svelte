@@ -47,4 +47,7 @@
 
 <style>
     @import '/static/css/praten-pages.css'; 
+    .praten-content p {
+        color: var(--g);
+    }
 </style>
