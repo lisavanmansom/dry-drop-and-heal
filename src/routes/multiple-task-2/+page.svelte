@@ -1,130 +1,58 @@
 <script>
-  import Header from "../../lib/molecules/Header.svelte";
-  import Card from "../../lib/molecules/Card.svelte";
-  import { MeshgradRed } from "$lib";
-  import Nav from "../../lib/molecules/Nav.svelte";
+  import { TaskSelector, Card, Header } from '$lib';
 </script>
 
-  <Header title="Het verlies aanvaarden" progressColor="#984a4a" />
-
   <main>
-    <MeshgradRed class="meshgrad" />
-    <h2>Rouwstappen van de dag</h2>
-    <h4>2 oefeningen open vandaag</h4>
+    <Header />
+    <TaskSelector
+      currentImage="/icon/rouwtaak-2.png"
+      current="De pijn doorvoelen"
+      progressColor="#984A4A"
+    />
+
+    <section class="rouwstappen">
+      <h3>Rouwstappen van de dag</h3>
+      <p>3 oefeningen open vandaag</p>
+    </section>
+    <Card
+      communityDrops="47"
+      buttonBorderColor="#984A4A"
+    />
   </main>
 
-  <section class="exercises">
-    <Card
-      imageSrc="/icon/rouwtaak-2-foto.png"
-      imageAlt="Rouwtaak Foto"
-      actionText="Start oefening"
-      description="Oefening"
-      title="Emoties herkennen"
-      buttonColor="#984a4a"
-      communityDrops="47"
-      communityImages={[
-        "/icon/community1.png",
-        "/icon/community2.png",
-        "/icon/community3.png",
-      ]}
-    />
-    <Card
-      imageSrc="/icon/rouwtaak-2-foto.png"
-      imageAlt="Rouwtaak Foto"
-      actionText="Start oefening"
-      description="Oefening"
-      title="Emoties herkennen"
-      buttonColor="#984a4a"
-      communityDrops="47"
-      communityImages={[
-        "/icon/community1.png",
-        "/icon/community2.png",
-        "/icon/community3.png",
-      ]}
-    />
-    <Card
-      imageSrc="/icon/rouwtaak-2-foto.png"
-      imageAlt="Rouwtaak Foto"
-      actionText="Start oefening"
-      description="Oefening"
-      title="Emoties herkennen"
-      buttonColor="#984a4a"
-      communityDrops="47"
-      communityImages={[
-        "/icon/community1.png",
-        "/icon/community2.png",
-        "/icon/community3.png",
-      ]}
-    />
-    <Card
-      imageSrc="/icon/rouwtaak-2-foto.png"
-      imageAlt="Rouwtaak Foto"
-      actionText="Start oefening"
-      description="Oefening"
-      title="Emoties herkennen"
-      buttonColor="#984a4a"
-      communityDrops="47"
-      communityImages={[
-        "/icon/community1.png",
-        "/icon/community2.png",
-        "/icon/community3.png",
-      ]}
-    />
-  </section>
-
-  <Nav />
-
 <style>
-  *::-webkit-scrollbar {
-    display: none;
-  }
-
-  body {
-    background: rgb(17, 17, 17);
-  }
-
-  h2 {
-    font-family: Calvino;
-    font-size: 2em;
-  }
-
   main {
+    background-color: #1e1e1e;
+    color: var(--w);
+    min-height: 100vh;
+    overflow-x: hidden;
     position: relative;
-    background-color: var(--b);
-    background-image: url("/gradients/Gr-red.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    width: 100%;
+  }
+
+  .rouwstappen {
+    margin: 3em;
+    padding: 30px 40px;
+  }
+
+  .rouwstappen h3 {
     color: white;
-    justify-content: center;
-    text-align: center;
-    padding-top: 5em;
-    padding-bottom: 2em;
-    overflow: hidden;
   }
 
-  main h2 {
-    margin-top: 5em;
-    margin-bottom: 0.3em;
-  }
-
-  main h4 {
+  .rouwstappen p {
     color: grey;
   }
 
-  .exercises {
-    display: grid;
-    background-color: rgb(17, 17, 17);
-    grid-template-columns: 1fr;
-    gap: 1.5em;
-    padding: 1em;
-    padding-bottom: 10em;
-    margin: 0 auto;
-  }
+  @media (max-width: 768px) {
+    .rouwstappen {
+      margin: 0em;
+      padding: 0;
+      text-align: center;
+      margin-top: 4em;
+    }
 
-  @media (min-width: 1200px) {
-    .exercises {
-      grid-template-columns: repeat(2, 1fr);
+    .rouwstappen h3 {
+      font-size: 1.5em;
     }
   }
 </style>

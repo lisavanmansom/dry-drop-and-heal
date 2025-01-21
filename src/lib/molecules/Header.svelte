@@ -1,202 +1,142 @@
-<script>
-  export let title = "Geen titel";
-  export let progressValue = Math.random() * 100;
-  export let progressColor = "red";
-  
-  let isMenuOpen = false; 
-  
-  function toggleMenu() {
-    isMenuOpen = !isMenuOpen;
-  }
-</script>
+<script>  
+    import { IconToday, IconProfile, IconHamburger, IconDrop, IconChat } from '$lib'
 
-<header class="header">
-  <div class="title">
-    <div class="title-row">
-      <h1>{title}</h1>
+    let menuOpen = false;
+  
+    function toggleMenu() {
+      menuOpen = !menuOpen;
+    }
+  </script>
+  
+  <header>
+    <nav>
+      <button class="hamburger-menu" on:click={toggleMenu}>
+        <IconHamburger/>
+      </button>
+      <ul class="nav-links" class:active={menuOpen}>
+        <li>
+          <a href="/chatbot" class="active">
+            <IconToday/>
+            Vandaag
+          </a>
+        </li>
+        <li>
+          <a href="/chatbot">
+            <IconChat/>
+            Praten
+          </a>
+        </li>
+        <li>
+          <a href="/chatbot">
+            <IconDrop/>
+            Drops
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="profile">
+      <a href="/chatbot">
+        <IconProfile/>
+        Profiel
+      </a>
     </div>
-    <progress value={progressValue} max="100" style="--progress-color: {progressColor}"></progress>
-  </div>
-
-  <button class="hamburger" on:click={toggleMenu}>
-    &#9776;
-  </button>
-
-  <div class="navigation-items {isMenuOpen ? 'open' : ''}">
-    <a href="multiple-task-1" class="item">
-      <img src="/icon/rouwtaak-1.png" alt="">
-      Het verlies aanvaarden
-    </a>
-    <a href="multiple-task-2" class="item">
-      <img src="/icon/rouwtaak-2.png" alt="">
-      De pijn doorvoelen
-    </a>
-    <a href="multiple-task-3" class="item">
-      <img src="/icon/rouwtaak-3.png" alt="">
-      Verder in verandering
-    </a>
-    <a href="multiple-task-4" class="item">
-      <img src="/icon/rouwtaak-4.png" alt="">
-      Emotioneel verder
-    </a>
-  </div>
-</header>
-
-<style>
-  :root {
-    --w: #ffff;
-    --b: #111;
-    --g: #a6a6a6;
-    --progress-bg: #595959;
-    --border-color: #1F1F1F;
-  }
-
-  header {
-    background-color: var(--b);
-    width: 100%;
-    color: var(--w);
-    border-bottom: 2px solid var(--border-color);
-    margin-bottom: 1em;
-    margin: 0em;
-    position: relative;
-  }
-
-  .header {
-    display: flex;
-    margin-left: auto;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .title {
-    margin: 1em;
-  }
-
-  .title-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-
-  .title-row h1 {
-    font-family: Calvino;
-    margin: 0;
-    font-size: 2em;
-    max-width: none;
-  }
-
-  progress {
-    width: 55%;
-    height: 2px;
-    margin-top: 1em;
-    appearance: none;
-  }
-
-  progress::-webkit-progress-bar {
-    background-color: var(--g);
-    border-radius: 5px;
-  }
-
-  progress::-webkit-progress-value {
-    background-color: var(--progress-color);
-  }
-
-  /* Hamburger button */
-  .hamburger {
-    display: none;
-    background: none;
-    border: none;
-    color: var(--w);
-    font-size: 30px;
-    cursor: pointer;
-    margin-right: 1em;
-  }
-
-  .navigation-items {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    display: block;
-  }
-
-  .navigation-items.open {
-    display: flex;
-  }
-
-  .item {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    padding: 1em;
-    color: var(--w);
-    margin-right: 20px;
-    text-align: center;
-    flex-direction: column;
-    transition: 0.5s all;
-    border: 2px solid transparent;
-    border-radius: 5px; 
-  }
-
-  .item img {
-    width: 50px;
-    height: 50px;
-    background-color: #1F1F1F;
-    padding: 0.2em;
-    border-radius: 5px;
-    margin-bottom: 10px; 
-  }
-
-  .item:hover {
-    scale: 1.1;
-  }
-
-  /* Mobile - Hamburger Menu */
-  @media (max-width: 1200px) {
-    .hamburger {
-      display: block;
+  </header>
+  
+  <style>
+    header {
+      top: 0;
+      z-index: 1000;
+      padding: 1.875em 2.5em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 3em;
     }
-
-    .navigation-items {
+  
+    .hamburger-menu {
       display: none;
-      flex-direction: column;
-      align-items: flex-start;
-      width: 100%;
-      background-color: var(--b);
-      padding: 1em;
-      position: absolute;
-      top: 70px;
-      left: 0;
-      z-index: 10;
+      cursor: pointer;
+      background: none;
+	    color: inherit;
+	    border: none;
+	    padding: 0;
+	    font: inherit;
+	    cursor: pointer;
+	    outline: inherit;
+    }
+  
+    nav ul {
+      display: flex;
+      gap: 7.5em;
+      list-style: none;
       margin: 0;
+      padding: 0;
     }
-
-    .navigation-items.open {
+  
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      transition: color 0.3s ease;
       display: flex;
+      align-items: center;
+      gap: 0.625em;
+      font-size: 1rem;
     }
-
-    .navigation-items .item {
-      margin: 1em 0;
-      width: 100%;
-      text-align: left;
+  
+    nav a.active {
+      color: #fff;
     }
-
-    .navigation-items.open .item {
-      border: 2px solid var(--border-color);
-    }
-  }
-
-  @media (min-width: 1201px) {
-    .navigation-items {
+  
+    .profile a {
+      text-decoration: none;
+      color: #fff;
+      transition: color 0.3s ease;
       display: flex;
-      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.625em;
+      font-size: 1rem;
     }
-
-    .item {
-      margin: 0 1em;
-      flex-direction: column;
-      max-width: 10ch;
+  
+    @media (max-width: 768px) {
+      header {
+        margin: 0em;
+      }
+      .hamburger-menu {
+        display: block;
+      }
+  
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1.25em;
+      }
+  
+      nav a {
+        border-bottom: 0.0625em solid rgba(255, 255, 255, 0.3);
+        padding-bottom: 0.625em;
+      }
+  
+      .nav-links.active {
+        display: flex;
+        position: absolute;
+        top: 10%;
+        z-index: 10;
+        background: rgba(255, 255, 255, 0.01);
+        box-shadow: 0 0.25em 1.875em rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(0.3125em);
+        -webkit-backdrop-filter: blur(0.3125em);
+        gap: 3em;
+        height: 100%;
+      }
+  
+      nav ul {
+        flex-direction: column;
+        gap: 1.25em;
+      }
     }
-  }
-</style>
+  </style>
