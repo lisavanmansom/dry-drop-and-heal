@@ -1,7 +1,7 @@
 <script>
     import MeshBlue from '$lib/meshgrad-blue-static.svelte';
     import BlurgradBlue from '$lib/blurgrad-blue.svelte';
-    import NavButtons from '$lib/NavButtons.svelte';
+    import NavButtons from '$lib/molecules/NavButtons.svelte';
 </script>
 
 
@@ -23,7 +23,7 @@
         <BlurgradBlue customStyles="top: -120px; right: -100px;" />
     
         <section class="intro-buttons">
-            <NavButtons leftLink="./" rightLink="./privacy" borderColor="var(--rt-1)"/>
+            <NavButtons leftLink="./" rightLink="./introductie-algemeen" borderColor="var(--rt-1)"/>
         </section>
     </section>
 
@@ -70,6 +70,3 @@
     }
     
 </style>
-
-
-

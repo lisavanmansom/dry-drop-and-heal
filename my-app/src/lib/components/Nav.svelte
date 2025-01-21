@@ -18,7 +18,7 @@
   
   <a 
     class="item {active === 'Praten' ? 'active' : ''}" 
-    href="/chatbot" 
+    href="./praten" 
 
   >
     <!-- Praten SVG -->
