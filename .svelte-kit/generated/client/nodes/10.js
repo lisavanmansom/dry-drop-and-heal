@@ -1,0 +1,1 @@
+export { default as component } from "../../../../src/routes/multiple-task-2/+page.svelte";
