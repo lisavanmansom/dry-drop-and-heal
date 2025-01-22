@@ -76,17 +76,51 @@
 </main>
 
 <style>
-  .blue-theme  { --rt: #64AAC7; }
-  .red-theme   { --rt: #984A4A; }
-  .green-theme { --rt: #6E9158; }
-  .pink-theme  { --rt: #7C6097; }
-
-  h1  { font-family: Calvino; z-index: 10; font-size: clamp(3rem, 15vw, 4rem); font-weight: 600; }
-  h2  { font-family: Calvino; font-weight: 600; font-size:clamp(1.6rem, 5vw, 2rem);}
-  p   { font-family: Figtree; color:var(--w); font-weight: 100; font-size:clamp(1rem, 5vw, 1.2rem);}
-  ul  { list-style: none ;}
-  a   { text-decoration: none; color: var(--w);}
-
+  .blue-theme {
+    --rt: #64AAC7;
+  }
+  
+  .red-theme {
+    --rt: #984A4A;
+  }
+  
+  .green-theme {
+    --rt: #6E9158;
+  }
+  
+  .pink-theme {
+    --rt: #7C6097;
+  }
+  
+  h1 {
+    font-family: Calvino;
+    z-index: 10;
+    font-size: clamp(3rem, 15vw, 4rem);
+    font-weight: 600;
+  }
+  
+  h2 {
+    font-family: Calvino;
+    font-weight: 600;
+    font-size: clamp(1.6rem, 5vw, 2rem);
+  }
+  
+  p {
+    font-family: Figtree;
+    color: var(--w);
+    font-weight: 100;
+    font-size: clamp(1rem, 5vw, 1.2rem);
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--w);
+  }
+  
   main {
     background-color: var(--b);
     color: var(--w);
@@ -98,184 +132,186 @@
     padding: 1.5em 0;
     position: relative;
     width: 100%;
-
-    .background-gradient {
-      position: absolute;
-      top: 15em;
-      transform: matrix(0, 2, 2, 0, 0, 0);
-    }
   }
-
-  nav    { container: nav-banner / inline-size; z-index: 10;
-    > ul {
-      align-items: center;
-      display: flex;
-      flex-direction: row;
-      gap: 1em;
-      justify-content: center;
-      width: 100%;
-
-    > li {
-      align-items: center;
-      display: flex;
-      justify-content: center;
-      width: 25%;
-
-      > a {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 100%;
-        }
-        @media (hover: hover) { 
-          > a:hover {
-              filter: brightness(75%);
-          }
-        }
-      }
-    }
-    @container nav-banner (width > 425px) {
-      ul {
-        padding: 0 2em;
-        gap: 5%;
-        > li { width: unset;
-          > a { flex-direction: row;
-            > span { order: 1; }
-          }
-        }
-      }
-       li:nth-of-type(4) {
-        flex-grow: 1;
-        justify-content: end;
-        > a { justify-content: end;}
-      }
-    }
-    @container nav-banner (width > 900px) {
-      ul {
-        padding: 0 4.5em;
-      }
-    }
-    @container nav-banner (width > 900px) {
-      ul {
-        padding: 0 8.5em;
-      }
-    }
+  
+  .background-gradient {
+    position: absolute;
+    top: 15em;
+    transform: matrix(0, 2, 2, 0, 0, 0);
   }
-
-  section { container: main-container / inline-size; z-index: 10;
+  
+  nav {
+    z-index: 10;
+  }
+  
+  .nav-ul {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .nav-ul li {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 25%;
+  }
+  
+  .nav-ul li a {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .nav-ul li a:hover {
+    filter: brightness(75%);
+  }
+  
+  .nav-ul li:nth-of-type(4) {
+    flex-grow: 1;
+    justify-content: end;
+  }
+  
+  .nav-ul li:nth-of-type(4) a {
+    justify-content: end;
+  }
+  
+  section {
+    z-index: 10;
     display: flex;
     flex-direction: column;
     gap: 1em;
     padding: 2em 1em;
     text-align: left;
-    > .heading-group {
-      display: flex;
-      flex-direction: column;
-      gap: .25em;
-      > h1 {
-        letter-spacing: 0.02em;
-      }
-      > details {
-        > ol { 
-          column-gap: 3em;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-around;
-          height: min-content;
-          padding: 1em;
-          row-gap: 1em;
-          > li {
-            flex-grow: 1;
-            margin-left: .5em;
-            padding-bottom: .2em;
-            width: 10em;
-
-            > a {
-              color: var(--w);
-              min-width: 40ch;
-
-            }
-            @media (hover: hover) { 
-              > a:hover {
-                filter: brightness(75%);
-              }
-            }
-          }
-        }
-        > summary {
-          color: var(--w);
-        }
-        @media (hover: hover) { 
-          > summary:hover {
-              filter: brightness(75%);
-          }
-        }
-      }
-
-      ::details-content {
-        transition: height 0.5s ease, content-visibility 0.5s ease allow-discrete;
-        height: 0;
-      }
-      [open]::details-content { height: 10em; }
-    
-    progress[value] {
-      appearance: none;
-      border: none;
-      height: .25em;
-      -moz-appearance: none;
-      -webkit-appearance: none;
-      min-width: 100%;
-    }
-    progress[value]::-webkit-progress-bar {
-      background-color: var(--progress-bg);
-      border-radius: 20px;
-    }
-    progress[value]::-webkit-progress-value { background-color: var(--w);}
   }
-
-  > article {
+  
+  .heading-group {
     display: flex;
     flex-direction: column;
-    > h2 {
-      order: -3;
+    gap: 0.25em;
+  }
+  
+  .heading-group h1 {
+    letter-spacing: 0.02em;
+  }
+  
+  .heading-group details ol {
+    column-gap: 3em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: min-content;
+    padding: 1em;
+    row-gap: 1em;
+  }
+  
+  .heading-group details ol li {
+    flex-grow: 1;
+    margin-left: 0.5em;
+    padding-bottom: 0.2em;
+    width: 10em;
+  }
+  
+  .heading-group details ol li a {
+    color: var(--w);
+    min-width: 40ch;
+  }
+  
+  .heading-group details ol li a:hover {
+    filter: brightness(75%);
+  }
+  
+  summary {
+    color: var(--w);
+  }
+  
+  summary:hover {
+    filter: brightness(75%);
+  }
+  
+  details[open] {
+    height: 10em;
+  }
+  
+  progress[value] {
+    appearance: none;
+    border: none;
+    height: 0.25em;
+    min-width: 100%;
+  }
+  
+  progress[value]::-webkit-progress-bar {
+    background-color: var(--progress-bg);
+    border-radius: 20px;
+  }
+  
+  progress[value]::-webkit-progress-value {
+    background-color: var(--w);
+  }
+  
+  article {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  article h2 {
+    order: -3;
+  }
+  
+  article p {
+    order: -2;
+    max-width: 45ch;
+    padding-bottom: 2em;
+  }
+  
+  article a {
+    border: 1px solid var(--w);
+    border-radius: 18px;
+    margin-top: 3em;
+    padding: 0.5em 2em;
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    width: max-content;
+  }
+  
+  article a:hover {
+    background-color: var(--b-h);
+    border: 1px solid var(--w);
+    color: var(--b);
+  }
+  
+  @media (min-width: 425px) {
+    .heading-group {
+      padding: 2em 2em 0;
     }
-    > p {
-      order: -2;
-      max-width: 45ch;
-      padding-bottom: 2em;
+  
+    article {
+      padding: 1em 2em 0;
     }
-    > a { 
-      border: 1px solid var(--w);
-      border-radius: 18px;
-      margin-top: 3em;
-      padding: .5em 2em;
-      transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      width: max-content;
+  }
+  
+  @media (min-width: 900px) {
+    .heading-group {
+      padding: 2em 4em 0;
     }
-    @media (hover: hover) { 
-      > a:hover {
-        background-color: var(--b-h);
-        border: 1px solid var(--w);
-        color: var(--b);
-        }
-      }
+  
+    article {
+      padding: 1em 4em 0;
+    }
   }
-
-  @container main-container (width > 425px) {
-      .heading-group { padding: 2em 2em 0; }
-      article { padding: 1em 2em 0;}
+  
+  @media (min-width: 1200px) {
+    .heading-group {
+      padding: 2em 8em 0;
+    }
+  
+    article {
+      padding: 1em 8em 0;
+    }
   }
-
-  @container main-container (width > 900px) {
-      .heading-group { padding: 2em 4em 0;
-        [open]::details-content { height: 4em; } }
-      article { padding: 1em 4em 0;}
-  }
-
-  @container main-container (width > 1200px) {
-      .heading-group { padding: 2em 8em 0; }
-      article { padding: 1em 8em 0;}
-  }
-}
-</style>
+  </style>
+  
