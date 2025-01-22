@@ -51,11 +51,10 @@
   header {
     top: 0;
     z-index: 1000;
-    padding: 1.875em 2.5em;
+    padding: 5em;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 3em;
   }
 
   .hamburger-menu {
@@ -95,14 +94,9 @@
     font-size: 1rem;
   }
 
-  svg {
-    width: 1.5em;
-    height: 1.5em;
-  }
-
   @media (max-width: 768px) {
     header {
-      margin: 0em;
+      padding: 1.875em 2.5em;
     }
     .hamburger-menu {
       display: block;

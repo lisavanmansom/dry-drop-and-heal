@@ -4,7 +4,6 @@
   import TaskSelector from "../../lib/components/Task-selector.svelte";
 </script>
 
-<body>
   <main>
     <Header />
     <TaskSelector />
@@ -22,16 +21,16 @@
       ]}
     />
   </main>
-</body>
 
 <style>
-  body {
+  main {
     background-color: #1e1e1e;
     background-image: url("/gradients/Gr-blue.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-position: right 800px top 80%;
+    height: 110vh;
   }
 
   .rouwstappen {
